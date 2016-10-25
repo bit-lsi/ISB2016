@@ -1,13 +1,13 @@
 ##################################################################################
 # Document Properties Section
 
-SET DOCUMENT Name = "Document name"
-SET DOCUMENT Description = "Document description"
+SET DOCUMENT Name = "Neuroinflammation"
+SET DOCUMENT Description = "BEL file created for Industrial Systems Biology lab course at B-IT UniBonn"
 SET DOCUMENT Version = "1.0"
-SET DOCUMENT Copyright = "Copyright (c) 2012, Sakthi. All Rights Reserved."
+SET DOCUMENT Copyright = "Copyright (c) 2016, Sakthi. All Rights Reserved."
 SET DOCUMENT Authors = "Sakthi"
-SET DOCUMENT Licenses = "Document license"
-SET DOCUMENT ContactInfo = "your@email.com"
+SET DOCUMENT Licenses = "CC 3.0"
+SET DOCUMENT ContactInfo = "sakthi23293@gmail.com"
 
 ##################################################################################
 # Definitions Section
