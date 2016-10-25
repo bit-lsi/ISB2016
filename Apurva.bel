@@ -1,0 +1,409 @@
+##################################################################################
+# Document Properties Section
+
+SET DOCUMENT Name = "Neuroinflammation"
+SET DOCUMENT Description = "BEL File created for Introduction to Systems Biology Modeling Lab course At B-IT University of Bonn"
+SET DOCUMENT Version = "1.0"
+SET DOCUMENT Copyright = "Copyright (c) 2016, Apurva Gopisetty. All Rights Reserved."
+SET DOCUMENT Authors = "Apurva Gopisetty"
+SET DOCUMENT Licenses = "CC 3.0"
+SET DOCUMENT ContactInfo = "apurva.gopisetty@gmail.com"
+
+##################################################################################
+# Definitions Section
+
+# NAMESPACE URLS
+
+DEFINE NAMESPACE ADO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/ADO.belns"
+DEFINE NAMESPACE AFFX AS URL "http://resource.belframework.org/belframework/20150611/namespace/affy-probeset-ids.belns"
+DEFINE NAMESPACE BRCO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/BRCO.belns"
+DEFINE NAMESPACE CHEBI AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi.belns"
+DEFINE NAMESPACE CHEBIID AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi-ids.belns"
+DEFINE NAMESPACE CHEMBL AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-names.belns"
+DEFINE NAMESPACE CHEMBLID AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-ids.belns"
+DEFINE NAMESPACE CTO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/CTO.belns"
+DEFINE NAMESPACE DO AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology.belns"
+DEFINE NAMESPACE DOID AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology-ids.belns"
+DEFINE NAMESPACE EGID AS URL "http://resource.belframework.org/belframework/20150611/namespace/entrez-gene-ids.belns"
+DEFINE NAMESPACE FlyBase AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Dmel.belns"
+DEFINE NAMESPACE GOBP AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process.belns"
+DEFINE NAMESPACE GOBPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process-ids.belns"
+DEFINE NAMESPACE GOCC AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component.belns"
+DEFINE NAMESPACE GOCCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component-ids.belns"
+DEFINE NAMESPACE HGNC AS URL "http://resource.belframework.org/belframework/20150611/namespace/hgnc-human-genes.belns"
+DEFINE NAMESPACE LMSD AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/LMSD.belns"
+DEFINE NAMESPACE MESHC AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals.belns"
+DEFINE NAMESPACE MESHCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals-ids.belns"
+DEFINE NAMESPACE MESHCS AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures.belns"
+DEFINE NAMESPACE MESHCSID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures-ids.belns"
+DEFINE NAMESPACE MESHD AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases.belns"
+DEFINE NAMESPACE MESHDID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases-ids.belns"
+DEFINE NAMESPACE MESHPP AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes.belns"
+DEFINE NAMESPACE MESHPPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes-ids.belns"
+DEFINE NAMESPACE MGI AS URL "http://resource.belframework.org/belframework/20150611/namespace/mgi-mouse-genes.belns"
+DEFINE NAMESPACE NIFT AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/NIFT.belns"
+DEFINE NAMESPACE NTN AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Nutrition.belns"
+DEFINE NAMESPACE PDO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PDO.belns"
+DEFINE NAMESPACE PH AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/Placeholder.belns"
+DEFINE NAMESPACE PMIBP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmibp.belns"
+DEFINE NAMESPACE PMICHEM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmichem.belns"
+DEFINE NAMESPACE PMICOMP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmicomp.belns"
+DEFINE NAMESPACE PMIDIS AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmidis.belns"
+DEFINE NAMESPACE PMIPFAM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmipfam.belns"
+DEFINE NAMESPACE PTS AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PTS.belns"
+DEFINE NAMESPACE RGD AS URL "http://resource.belframework.org/belframework/20150611/namespace/rgd-rat-genes.belns"
+DEFINE NAMESPACE SCHEM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-chemicals.belns"
+DEFINE NAMESPACE SCOMP AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-named-complexes.belns"
+DEFINE NAMESPACE SDIS AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-diseases.belns"
+DEFINE NAMESPACE SFAM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-protein-families.belns"
+DEFINE NAMESPACE SP AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot.belns"
+DEFINE NAMESPACE SPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot-ids.belns"
+DEFINE NAMESPACE dbSNP AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/SNP.belns"
+
+
+# ANNOTATION URLS
+
+DEFINE ANNOTATION Anatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/anatomy.belanno"
+DEFINE ANNOTATION BodyRegion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-body-region.belanno"
+DEFINE ANNOTATION CardiovascularSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-cardiovascular-system.belanno"
+DEFINE ANNOTATION Cell AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell.belanno"
+DEFINE ANNOTATION CellLine AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-line.belanno"
+DEFINE ANNOTATION CellStructure AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-structure.belanno"
+DEFINE ANNOTATION DigestiveSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-digestive-system.belanno"
+DEFINE ANNOTATION Disease AS URL "http://resource.belframework.org/belframework/20131211/annotation/disease.belanno"
+DEFINE ANNOTATION FluidAndSecretion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-fluid-and-secretion.belanno"
+DEFINE ANNOTATION HemicAndImmuneSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-hemic-and-immune-system.belanno"
+DEFINE ANNOTATION IntegumentarySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-integumentary-system.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-anatomy.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-diseases.belanno"
+DEFINE ANNOTATION NervousSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-nervous-system.belanno"
+DEFINE ANNOTATION RespiratorySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-respiratory-system.belanno"
+DEFINE ANNOTATION Species AS URL "http://resource.belframework.org/belframework/20131211/annotation/species-taxonomy-id.belanno"
+DEFINE ANNOTATION Tissue AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-tissue.belanno"
+DEFINE ANNOTATION UrogenitalSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-urogenital-system.belanno"
+
+##################################################################################
+# Statements Section
+
+SET STATEMENT_GROUP = "Group 1"
+
+# Add statements below this comment
+# Citation = {"SOURCE", "Publication info", "PUBMED ID"}
+
+############## 19668193 ################
+SET Citation = {"PubMed","Nat Med. 2009 Sep;15(9):1038-45. doi: 10.1038/nm.2003. Epub 2009 Aug 9.","19668193"}
+
+SET Evidence = "Arising from CD19+ B cells, GIFT15 B(reg) cells express major histocompatibility complex class I (MHCI) and MHCII, 
+surface IgM and IgD, and secrete IL-10, akin to previously described B10 and T2-MZP B(reg) cells, but lose expression of the transcription 
+factor PAX5, coupled to upregulation of CD138 and reciprocal suppression of CD19."
+sec(p(HGNC:IL10)) -- complex(SCOMP:"MHC Class I Complex")
+p(RGD:Igh-6) -- complex(SCOMP:"MHC Class I Complex")
+p(HGNC:IL10) -- p(RGD:Igh-6)
+p(HGNC:CD19) -- p(HGNC:IL10)
+p(HGNC:SDC1) -- p(HGNC:PAX5)
+
+
+###################### 19748567 #######################################
+
+SET Citation = {"PubMed", "Brain Behav Immun. 2010 Jan;24(1):119-26. doi: 10.1016/j.bbi.2009.09.002. Epub 2009 Sep 11.","19748567"}
+
+SET Evidence = "The results demonstrate that the GFAP-IL6 mice are resistant to high-fat 
+diet-induced increases in body weight and body fat, apparently without altering food intake 
+and with no evidences of increased sympathetic tone. "
+
+p(MGI:Il6) -> a(MESHPP:"Body Mass Index")
+p(HGNC:IL6) -- p(HGNC:GFAP)
+
+SET Evidence = "The high-fat diet-induced impaired responses to an insulin tolerance test (ITT), 
+and to an oral glucose tolerance test (OGTT) in both genotypes."
+a(MESHPP:"Body Mass Index") -| p(HGNC:INS)
+
+##################### 19800321 #########################
+
+SET Citation = {"PubMed","Biochem Pharmacol. 2010 Feb 15;79(4):596-609. doi: 10.1016/j.bcp.2009.09.026.","19800321"}
+
+SET Evidence = " From the mouse microglia cell-based assays, an imidazo [4,5-b] pyridine compound KR-31360 
+was identified as an inhibitor of microglial NO production with an IC(50) value of 2 microM."
+SET Species = "10090"
+SET Cell = "microglial cell"
+p(CHEBI:"pyridine") -| a(CHEBI:"nitric oxide")
+
+
+SET Evidence = "KR-31360 also inhibited lipopolysaccharide (LPS)-induced secretion of tumor necrosis factor alpha 
+(TNF-alpha) and transcription of TNF-alpha, interleukin-1 beta, and inducible nitric oxide synthase as well as activation of 
+nuclear factor kappa B and mitogen-activated protein kinases."
+p(CHEBI:"3-[(2-methoxyphenyl)methyl]imidazo[4,5-b]pyridine") -| r(HGNC:IL1A)
+p(CHEBI:"3-[(2-methoxyphenyl)methyl]imidazo[4,5-b]pyridine") -| r(HGNC:TNF)
+p(CHEBI:"3-[(2-methoxyphenyl)methyl]imidazo[4,5-b]pyridine") -| sec(p(HGNC:TNF))
+p(CHEBI:"3-[(2-methoxyphenyl)methyl]imidazo[4,5-b]pyridine") -| p(HGNC:NFKB)
+p(CHEBI:"3-[(2-methoxyphenyl)methyl]imidazo[4,5-b]pyridine") -| bp(GOBP:"MAPK cascade")
+
+
+############################ 19853010 #####################
+
+SET Citation = {"PubMed","Prog Neurobiol. 2010 Feb 9;90(2):256-62. doi: 10.1016/j.pneurobio.2009.10.015. Epub 2009 Oct 21.","19853010"}
+
+SET Evidence = "In the brain, the constitutive expression is low, but activated microglia produce and release interleukin-1 during 
+pathological conditions such as neurodegenerative disorders (e.g. stroke, 
+traumatic brain injury, Alzheimer's disease, Parkinson's disease)."
+SET MeSHAnatomy = "brain"
+path(MESHD:"Neurodegenerative Diseases") -> p(HGNC:IL1B)
+
+SET Evidence = "Interleukin-1 has an important role in mediating 'sickness symptoms' such as fever, in response to infections."
+path(MESHD:Infection) -- p(HGNC:IL1B)  
+path(MESHD:Fever) -- p(HGNC:IL1B)
+
+SET Evidence = "Moreover, deregulated expression of interleukin-1 is associated with ageing-related chronic neurodegenerative disorders."
+path(MESHD:"Neurodegenerative Diseases") -- p(HGNC:IL1B)
+
+
+########################### 19881300 #######################
+
+SET Citation = {"PubMed","Biol Pharm Bull. 2009 Nov;32(11):1870-4.","19881300"}
+
+SET Evidence = "A viral component (double-stranded (ds)RNA) triggers a toll-like receptor 3-dependent inflammatory response 
+that stimulates pro-inflammatory mediators in the brain."
+a(SCHEM:"double-stranded RNA") -- p(HGNC:TLR3)
+p(HGNC:TLR3) -- bp(GOBP:"inflammatory response")
+
+SET Evidence = "Both compounds inhibited dsRNA-induced inducible nitric oxide synthase (iNOS) expression, a major pro-inflammatory enzyme."
+a(MESHC:fraxinellone) -| r(HGNC:NOS2)
+a(MESHC:sauchinone)-| r(HGNC:NOS2)
+
+SET Evidence = "Our data show that dsRNA promotes the expression of signal transducers and activators of transcription (STAT)1/3 identified 
+as major inflammatory transcription factors as well as activates c-Jun N-terminal kinase (JNK) in an early time."
+a(SCHEM:"double-stranded RNA") -> p(HGNC:MAPK8)
+
+SET Evidence = "These results suggest that an anti-inflammatory effect by fraxinellone and sauchinone is mediated via blockade of the 
+JNK-STAT1/3-iNOS signaling pathway in viral-infected microglia."
+p(HGNC:NOS2) -- p(HGNC:MAPK8)
+
+
+############################ 20038643 ##########################
+
+SET Citation = {"PubMed","J Immunol. 2010 Feb 1;184(3):1499-506. doi: 10.4049/jimmunol.0903302. Epub 2009 Dec 28.","20038643"}
+
+SET Evidence = "Sema4D/CD100, a class IV semaphorin, has been shown to be involved in the 
+nervous and immune systems through its receptors plexin-B1 and CD72, respectively."
+p(HGNC:SEMA4D) -- bp(GOBP:"central nervous system")
+p(HGNC:SEMA4D) -- bp(GOBP:"immune system process")
+
+SET Evidence = "We found that Sema4D promoted inducible NO synthase expression by primary mouse 
+microglia, the effects of which were abolished in plexin-B1-deficient but not in CD72-deficient microglia."
+SET Cell = "microglial cell"
+p(HGNC:SEMA4D) -> r(HGNC:NOS2)
+p(HGNC:PLXNB1) -| p(HGNC:NOS2)
+UNSET Cell
+
+SET Evidence = "In addition, during the development of experimental autoimmune encephalomyelitis (EAE), which was induced by immunization with 
+myelin oligodendrocyte glycoprotein-derived peptides, we observed that the expression of Sema4D and plexin-B1 
+was induced in infiltrating mononuclear cells and microglia, respectively."
+p(HGNC:PLXNB1) -- path(MESHD:Encephalomyelitis)
+p(HGNC:SEMA4D) -- path(MESHD:Encephalomyelitis)
+
+SET Evidence = "Collectively, our findings demonstrate the role of Sema4D-plexin-B1 interactions in the activation of 
+microglia and provide their pathologic significance in neuroinflammation."
+
+complex(p(HGNC:SEMA4D),p(HGNC:PLXNB1)) -- path(MESHD:"Neuroinflammation")
+
+
+############################ 20064570 ##############################
+
+SET Citation = {"PubMed","Neurochem Int. 2010 Mar;56(4):585-9. doi: 10.1016/j.neuint.2009.12.022. Epub 2010 Jan 12.","20064570"}
+
+SET Evidence = "Neuroinflammation is believed to play an important role in neurological diseases such as Alzheimer's disease (AD)."
+path(MESHD:"Neuroinflammation")-- path(MESHD:"Alzheimer Disease")
+path(MESHD:"Alzheimer Disease") -- path(MESHD:"Nervous System Diseases")
+
+SET Evidence =  "Growing evidence suggests that n-3 PUFA have protective effects by inhibiting inflammatory 
+processes including synthesis of eicosanoids from arachidonic acid."
+a(CHEBI:"polyunsaturated fatty acid") -| a(CHEBI:icosanoid)
+a(SCHEM:"Arachidonic acid") -- a(CHEBI:icosanoid)
+
+SET Evidence = "Therefore, in this study, the effect of n-3 PUFA on brain cortex fatty acid composition, and on the 
+expression of calcium-dependant cytosolic phospholipase A(2) (cPLA(2)) 
+and cyclooxygenase-2 (COX-2) was assessed in the transgenic fat-1 mouse."
+a(SCHEM:Calcium) -> p(HGNC:PLA2G4A)
+a(CHEBI:"polyunsaturated fatty acid") -- r(HGNC:PLA2G4A)
+
+
+################################ 20162721 #################################
+
+SET Citation = {"PubMed","J Neurosci Res. 2010 Aug 1;88(10):2188-96. doi: 10.1002/jnr.22378.","20162721"}
+
+SET Evidence = "Glucocorticoid-induced tumor necrosis factor receptor family-related protein ligand (GITRL) is 
+a member of the tumor necrosis factor superfamily (TNFSF) and is known to act as a costimulator in the immune system 
+by binding to GITR."
+p(HGNC:TNFSF18) -- bp(GOBP:"immune system process")
+
+SET Evidence = "stimulation of GITRL induces inflammatory activation of microglia on the basis of production of nitric oxide (NO)
+and expression of inducible nitric oxide synthase"
+p(HGNC:TNFSF18) -> a(CHEBI:"nitric oxide")
+
+SET Evidence = " GITRL stimulation also induces microglia cell death."
+SET Cell = "microglial cell"
+p(HGNC:TNFSF18) -> bp(GOBP:"cell death")
+
+SET Evidence = "GITRL-mediated microglial NO production partially depends on p38 MAPK, JNK, and nuclear factor-kappaB pathways"
+a(CHEBI:"nitric oxide") -- p(HGNC:MAPK14) 
+p(HGNC:MAPK14) -- p(HGNC:NFKB)
+UNSET Cell
+
+################################# 20385796 ###############################
+
+SET Citation = {"PubMed","Proc Natl Acad Sci U S A. 2010 Apr 27;107(17):7969-74. doi: 10.1073/pnas.1001056107. Epub 2010 Apr 12.","20385796"}
+
+SET Evidence = "    Familial Danish dementia (FDD) is a progressive neurodegenerative disease with cerebral 
+deposition of Dan-amyloid (ADan), neuroinflammation, and neurofibrillary tangles, 
+hallmark characteristics remarkably similar to those in Alzheimer's disease (AD)"
+path(MESHD:"Neurodegenerative Diseases") -- path(ADO:"Neurofibrillary_tangle")
+path(MESHD:"Neurodegenerative Diseases") -- path(MESHD:"Neuroinflammation")
+path(MESHD:"Neurodegenerative Diseases") -- path(MESHD:"Alzheimer Disease")
+
+
+################################### 20404154 ########################
+
+SET Citation = {"PubMed","Proc Natl Acad Sci U S A. 2010 May 4;107(18):8416-21. doi: 10.1073/pnas.0910627107. Epub 2010 Apr 19.","20404154"}
+
+SET Evidence = "Astroglial reactivity associated with increased production of NFkappaB-dependent proinflammatory molecules is an important component of 
+the pathophysiology of chronic neurological disorders such as multiple sclerosis (MS)."
+path(MESHD:"Multiple Sclerosis") -- p(HGNC:NFKB1)
+path(MESHD:"Nervous System Diseases") -- p(HGNC:NFKB1)
+path(MESHD:"Multiple Sclerosis") -- path(MESHD:"Nervous System Diseases")
+
+SET Evidence = "Using mouse experimental allergic encephalomyelitis (EAE) as a model of chronic neuroinflammation, we report that implants reproducing pregnancy levels of 
+17beta-estradiol (E2) alleviate ongoing disease and decrease astrocytic production of CCL2, 
+a proinflammatory chemokine that drives the local recruitment of inflammatory myeloid cells."
+a(SCHEM:chemokine) -- a(CHEMBLID:CHEMBL49440)
+a(SCHEM:chemokine) -- p(HGNC:CCL2)
+
+SET Evidence = "In cultured rodent astrocytes, E2 or an ERalpha agonist, but not an ERbeta agonist, inhibits TNFalpha-induced CCL2 expression at 
+nanomolar concentrations, and the ER antagonist ICI 182,170 blocks this effect."
+SET Cell="Astrocytes"
+p(HGNC:CCL2) -- p(HGNC:TNF)
+
+SET Evidence = "Chromatin immunoprecipitation assays further indicate that estrogen suppresses 
+TNFalpha-induced NFkappaB recruitment to the CCL2 enhancer."
+a(CHEBI:estrogen) -| p(HGNC:NFKB1)
+p(HGNC:NFKB1) -| p(HGNC:CCL2)
+
+################################ 20557428########################
+
+SET Citation = {"PubMed","J Neurochem. 2010 Sep 1;114(5):1511-26. doi: 10.1111/j.1471-4159.2010.06867.x. Epub 2010 Jun 16.","20557428"}
+
+SET Evidence = "As the transcriptional activator retinoic acid (RA), used for chemotherapy and dermatological applications, exerts anti-inflammatory effects on monocytes and lymphocytes, 
+we have tested whether the physiologically occurring isomer, all-trans RA, affects chemokine expression by astrocytes."
+a(CHEBI:"all-trans-retinoic acid") -- a(SCHEM:"chemokine")
+a(CHEBI:lipopolysaccharide) -> path(MESHD:"Inflammation")
+a(CHEBI:lipopolysaccharide) -> p(HGNC:CCL2)
+a(CHEBI:lipopolysaccharide) -> p(HGNC:CCL3)
+a(CHEBI:lipopolysaccharide) -> p(HGNC:CCL5)
+a(CHEBI:lipopolysaccharide) -> p(HGNC:CCL1)
+a(CHEBI:lipopolysaccharide) -> p(HGNC:CXCL2)
+
+SET Evidence = "    The anti-inflammatory activity of RA engaged RA and retinoid X receptors and correlated with a 
+decreased expression of the lipopolysaccharides co-receptor CD14."
+complex(a(CHEBI:"all-trans-retinoic acid"),p(SFAM:"RXR Family")) -| a(CHEBI:lipopolysaccharide)
+p(HGNC:CD14) -- a(CHEBI:lipopolysaccharide)
+ 
+SET Evidence = "A minor reduction of nuclear NF-kappaB was observed but not significant, activation of Jun amino-terminal kinase, 
+p38 and signal transducer and activator of transcription 3 were not altered by RA."
+complex(a(CHEBI:"all-trans-retinoic acid"),p(SFAM:"RXR Family")) -| a(CHEBI:lipopolysaccharide)
+p(HGNC:CD14) -- a(CHEBI:lipopolysaccharide)
+a(CHEBI:lipopolysaccharide) -| p(HGNC:NFKB1)
+
+########################## 20566832 ###########################
+
+SET Citation = {"PubMed","J Immunol. 2010 Jul 15;185(2):1230-7. doi: 10.4049/jimmunol.1000208. Epub 2010 Jun 21.","20566832"}
+
+SET Evidence = "MPTP induced degeneration of nigrostriatal DA neurons and glial activation as visualized by tyrosine hydroxylase, 
+macrophage Ag complex-1, and/or glial fibrillary acidic protein immunoreactivity."
+p(HGNC:GFAP) -- a(CHEMBLID:CHEMBL24172)
+p(HGNC:TH) -- a(CHEMBLID:CHEMBL24172)
+
+SET Evidence = "Paroxetine prevents loss of nigrostriatal dopaminergic neurons by inhibiting brain inflammation and 
+oxidative stress in an experimental model of Parkinson's disease."
+a(CHEBI: "paroxetine") -| path(MESHD:Encephalitis)
+a(CHEBI: "paroxetine") -| a(SCHEM:"Reactive Oxygen Species")
+
+
+######################### 20631174 ##################################
+
+SET Citation = {"PubMed","J Neurosci. 2010 Jul 14;30(28):9454-64. doi: 10.1523/JNEUROSCI.5796-09.2010.","20631174"}
+
+SET Evidence = "We now show that CD40, a receptor for CD40L, is highly expressed in brain endothelial cells of 
+patients affected by HIV-1 encephalitis (HIVE), suggesting an important role for the 
+CD40/CD40L dyad in regulating blood-brain barrier (BBB) functions."
+SET Cell = "endothelial cell"
+SET NervousSystem = "Brain"
+p(HGNC:CD40LG) -- p(HGNC:CD40)
+path(MESHD:Encephalitis)-> p(HGNC:CD40)
+path(MESHD:Encephalitis) -- bp(GOBP:"maintenance of blood-brain barrier")
+UNSET NervousSystem
+UNSET Cell
+
+SET Evidence = "CD40L induced activation of mixed-lineage-kinase-3 and JNK, leading to the 
+subsequent activation of cJUN/AP-1 (activating-protein-1)."
+p(HGNC:CD40LG) -> p(HGNC:MAP3K11)
+p(HGNC:MAP3K11) -> p(HGNC:MAPK8)
+p(HGNC:MAP3K11) -> p(HGNC:JUN)
+
+
+########################## 20637688 ######################3
+
+SET Citation = {"PubMed","J Clin Virol. 2010 Sep;49(1):4-10. doi: 10.1016/j.jcv.2010.06.009. Epub 2010 Jul 15.","20637688"}
+
+SET Evidence = "Histopathology of brain was done to observe the morphological changes after JEV infection and genes relevant to 
+macrophage activation, chemokine secretion, inflammatory cell infiltration, and blood-brain barrier permeability were examined at their 
+gene and protein expression level for various time points after infection."
+
+sec(a(SCHEM:chemokine))-- sec(bp(GOBP:"macrophage activation"))
+
+
+########################## 20657581 #############################
+
+SET Citation = {"PubMed","Nat Med. 2010 Aug;16(8):897-902. doi: 10.1038/nm.2183. Epub 2010 Jul 25.","20657581"}
+
+SET Evidence = "High amounts of glutamate are found in the brains of people with multiple sclerosis, an inflammatory 
+disease marked by progressive demyelination."
+SET NervousSystem = "Brain"
+a(SCHEM:"L-Glutamate") -- path(MESHD:"Multiple Sclerosis")
+
+SET Evidence = "In dendritic cells (DCs) from those mice, defective mGluR4 signaling-which would normally decrease intracellular 
+cAMP formation-biased T(H) cell commitment to the T(H)17 phenotype."
+a(SCHEM:"cyclic AMP") -- p(HGNC:GRM4)
+
+
+######################## 20689579 ############################
+
+SET Citation = {"PubMed","PLoS One. 2010 Jul 30;5(7):e11866. doi: 10.1371/journal.pone.0011866.","20689579"}
+
+SET Evidence = " Amyloid precursor protein (APP) occupies a central position in AD and APP-derived amyloid-beta (Abeta) peptides 
+are thought to play a pivotal role in disease pathogenesis."
+path(MESHD:"Alzheimer Disease") -- p(HGNC:APP)
+
+SET Evidence = "APP intracellular domain (AICD) is generated together with Abeta and we recently showed that AICD transgenic mice 
+recapitulate pathological features of AD such as tau hyperphosphorylation, memory 
+deficits and neurodegeneration without increasing the Abeta levels."
+SET Species = "10090"
+p(HGNC:APP) -- bp(SDIS:"Neurodegeneration")
+
+
+####################### 20696240 ###############################
+
+SET Citation = {"PubMed","Biochim Biophys Acta. 2011 Feb;1812(2):162-76. doi: 10.1016/j.bbadis.2010.07.016. Epub 2010 Aug 6.","20696240"}
+
+SET Evidence = " The HERV-W family has received substantial attention in large part because of associations with diverse syndromes including 
+multiple sclerosis (MS) and several psychiatric disorders."
+p(HGNC:"endogenous retrovirus group W member 1") -- path(MESHD:"Multiple Sclerosis")
+
+SET Evidence = ". A HERV-W-related retroelement, multiple sclerosis retrovirus (MSRV), has been reported in 
+MS patients to be both a biomarker as well as an effector of aberrant immune responses."
+p(HGNC:"endogenous retrovirus group W member 1") biomarkerFor bp(GOBP:"immune response")
+
+############################################################################33
+###############END OF ANNOTATION ###########################
+
+
+UNSET STATEMENT_GROUP
+
