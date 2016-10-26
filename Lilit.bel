@@ -1,0 +1,292 @@
+##################################################################################
+# Document Properties Section
+
+SET DOCUMENT Name = “Neuroinflammation”
+SET DOCUMENT Description = “BEL file for Lab course at B-IT Uni Bonn”
+SET DOCUMENT Version = "1.0"
+SET DOCUMENT Copyright = "Copyright (c) 2012, lilit.antonyan. All Rights Reserved."
+SET DOCUMENT Authors = "lilit.antonyan"
+SET DOCUMENT Licenses = “CC 3.0”
+SET DOCUMENT ContactInfo = “lilit.antonyan93@gmail.com"
+
+##################################################################################
+# Definitions Section
+
+# NAMESPACE URLS
+
+DEFINE NAMESPACE ADO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/ADO.belns"
+DEFINE NAMESPACE AFFX AS URL "http://resource.belframework.org/belframework/20150611/namespace/affy-probeset-ids.belns"
+DEFINE NAMESPACE BRCO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/BRCO.belns"
+DEFINE NAMESPACE CHEBI AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi.belns"
+DEFINE NAMESPACE CHEBIID AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi-ids.belns"
+DEFINE NAMESPACE CHEMBL AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-names.belns"
+DEFINE NAMESPACE CHEMBLID AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-ids.belns"
+DEFINE NAMESPACE CTO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/CTO.belns"
+DEFINE NAMESPACE DO AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology.belns"
+DEFINE NAMESPACE DOID AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology-ids.belns"
+DEFINE NAMESPACE EGID AS URL "http://resource.belframework.org/belframework/20150611/namespace/entrez-gene-ids.belns"
+DEFINE NAMESPACE FlyBase AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Dmel.belns"
+DEFINE NAMESPACE GOBP AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process.belns"
+DEFINE NAMESPACE GOBPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process-ids.belns"
+DEFINE NAMESPACE GOCC AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component.belns"
+DEFINE NAMESPACE GOCCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component-ids.belns"
+DEFINE NAMESPACE HGNC AS URL "http://resource.belframework.org/belframework/20150611/namespace/hgnc-human-genes.belns"
+DEFINE NAMESPACE LMSD AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/LMSD.belns"
+DEFINE NAMESPACE MESHC AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals.belns"
+DEFINE NAMESPACE MESHCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals-ids.belns"
+DEFINE NAMESPACE MESHCS AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures.belns"
+DEFINE NAMESPACE MESHCSID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures-ids.belns"
+DEFINE NAMESPACE MESHD AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases.belns"
+DEFINE NAMESPACE MESHDID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases-ids.belns"
+DEFINE NAMESPACE MESHPP AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes.belns"
+DEFINE NAMESPACE MESHPPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes-ids.belns"
+DEFINE NAMESPACE MGI AS URL "http://resource.belframework.org/belframework/20150611/namespace/mgi-mouse-genes.belns"
+DEFINE NAMESPACE NIFT AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/NIFT.belns"
+DEFINE NAMESPACE NTN AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Nutrition.belns"
+DEFINE NAMESPACE PDO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PDO.belns"
+DEFINE NAMESPACE PH AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/Placeholder.belns"
+DEFINE NAMESPACE PMIBP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmibp.belns"
+DEFINE NAMESPACE PMICHEM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmichem.belns"
+DEFINE NAMESPACE PMICOMP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmicomp.belns"
+DEFINE NAMESPACE PMIDIS AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmidis.belns"
+DEFINE NAMESPACE PMIPFAM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmipfam.belns"
+DEFINE NAMESPACE PTS AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PTS.belns"
+DEFINE NAMESPACE RGD AS URL "http://resource.belframework.org/belframework/20150611/namespace/rgd-rat-genes.belns"
+DEFINE NAMESPACE SCHEM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-chemicals.belns"
+DEFINE NAMESPACE SCOMP AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-named-complexes.belns"
+DEFINE NAMESPACE SDIS AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-diseases.belns"
+DEFINE NAMESPACE SFAM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-protein-families.belns"
+DEFINE NAMESPACE SP AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot.belns"
+DEFINE NAMESPACE SPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot-ids.belns"
+DEFINE NAMESPACE dbSNP AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/SNP.belns"
+
+
+# ANNOTATION URLS
+
+DEFINE ANNOTATION Anatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/anatomy.belanno"
+DEFINE ANNOTATION BodyRegion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-body-region.belanno"
+DEFINE ANNOTATION CardiovascularSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-cardiovascular-system.belanno"
+DEFINE ANNOTATION Cell AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell.belanno"
+DEFINE ANNOTATION CellLine AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-line.belanno"
+DEFINE ANNOTATION CellStructure AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-structure.belanno"
+DEFINE ANNOTATION DigestiveSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-digestive-system.belanno"
+DEFINE ANNOTATION Disease AS URL "http://resource.belframework.org/belframework/20131211/annotation/disease.belanno"
+DEFINE ANNOTATION FluidAndSecretion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-fluid-and-secretion.belanno"
+DEFINE ANNOTATION HemicAndImmuneSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-hemic-and-immune-system.belanno"
+DEFINE ANNOTATION IntegumentarySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-integumentary-system.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-anatomy.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-diseases.belanno"
+DEFINE ANNOTATION NervousSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-nervous-system.belanno"
+DEFINE ANNOTATION RespiratorySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-respiratory-system.belanno"
+DEFINE ANNOTATION Species AS URL "http://resource.belframework.org/belframework/20131211/annotation/species-taxonomy-id.belanno"
+DEFINE ANNOTATION Tissue AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-tissue.belanno"
+DEFINE ANNOTATION UrogenitalSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-urogenital-system.belanno"
+
+##################################################################################
+# Statements Section
+
+SET STATEMENT_GROUP = "Group 1"
+
+# Add statements below this comment
+
+##################################################################
+SET Citation ={"PubMed","Proc Natl Acad Sci U S A. 2014 May 27;111(21):7671-6. doi: 10.1073/pnas.1315346111. Epub 2014 May 9.", "24817693"}
+SET Evidence ="We show that α-synuclein amyloid fibrils grow by monomer and not oligomer addition and 
+are subject to higher-order assembly processes that decrease their capacity to grow. "
+
+p(HGNC:SNCA) -> bp(GOBP:"amyloid fibril formation")
+
+###################################################################
+SET Citation = {"PubMed","J Proteomics. 2014 Jun 25;106:191-204. doi: 10.1016/j.jprot.2014.04.028. Epub 2014 Apr 24.","24769233"}
+
+SET Evidence = "The proteome of CSF EVs was enriched in exosomal markers such as alix and syntenin-1, 
+heat shock proteins and tetraspanins and contained a high proportion of brain-derived proteins (n=373)."
+SET FluidAndSecretion = "Cerebrospinal Fluid"
+
+complex(GOCC:"extracellular vesicle") -> p(HGNC:PDCD6IP)
+complex(GOCC:"extracellular vesicle") -> p(HGNC:SDCBP)
+complex(GOCC:"extracellular vesicle") -> p(SFAM:"HSP90 Family")
+ 
+SET Evidence = "Most interestingly, the involvement of extracellular vesicles in transferring toxic proteins such as α-synuclein and 
+β-amyloid has been postulated as one of the mechanisms involved in the spreading of neurodegeneration to different brain areas."
+SET NervousSystem = "Brain"
+
+p(HGNC:SNCA) -- path(MESHD:"Neurodegenerative Diseases")
+p(HGNC:APP) -- path(MESHD:"Neurodegenerative Diseases")
+
+###################################################################
+SET Citation = {"PubMed", "Neurobiol Dis. 2014 May;65:82-92. doi: 10.1016/j.nbd.2013.12.019. Epub 2014 Jan 9.", "24412310"}
+SET Evidence = "We have recently shown the propagation of AD pathology via cell-to-cell transfer of oligomeric amyloid beta (Aβ) 
+residues 1-42 (oAβ1-42) using our donor-acceptor 3-D co-culture model."
+
+p(HGNC:APP) -- path(MESHD:"Alzheimer Disease")
+
+###################################################################
+SET Citation = {"PubMed", "Rev Neurol (Paris). 2013 Oct;169(10):825-33. doi: 10.1016/j.neurol.2013.07.018. Epub 2013 Sep 12.", "24035591"}
+SET Evidence = "Finally, synthetic preformed fibrils of alpha-synuclein initiate the development of alpha-synuclein accumulation 
+resembling Parkinson's disease in wild-type mice."
+SET Species = "10090"
+
+p(HGNC:SNCA) -- path(MESHD:"Parkinson Disease") 
+
+###################################################################
+SET Citation = {"PubMed", "Prion. 2013 Sep-Oct;7(5):369-77. doi: 10.4161/pri.26414. Epub 2013 Sep 10.", "24021964 "}
+SET Evidence = "Prions are self-templating protein aggregates that were originally identified as the causative agent of prion diseases 
+in mammals, but have since been discovered in other kingdoms. "
+
+p(HGNC:PRNP) -- path(MESHD:"Prion Diseases")
+
+###################################################################
+SET Citation = {"PubMed", "Annu Rev Microbiol. 2013;67:543-64. doi: 10.1146/annurev-micro-092412-155735. Epub 2013 Jun 28.", " 23808331"}
+SET Evidence = " Purified TSE prions usually take the form of amyloid fibrils, which are self-seeding ultrastructures common to many serious
+protein misfolding diseases such as Alzheimer's, Parkinson's, Huntington's and Lou Gehrig's (amytrophic lateral sclerosis)."
+
+p(HGNC:PRNP) -- path(MESHD:"Alzheimer Disease")
+p(HGNC:PRNP) -- path(MESHD:"Parkinson Disease")
+p(HGNC:PRNP) -- path(MESHD:"Huntington Disease")
+p(HGNC:PRNP) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+
+###################################################################
+SET Citation = {"PubMed","Prion. 2013 Jul-Aug;7(4):276-9. doi: 10.4161/pri.25566. Epub 2013 Jun 27.","23807178"}
+SET Species = "10090"
+SET Evidence = "We propose that Prnp polymorphisms are one route by which certain prion strains may preferentially propagate. 
+This has significant implications for prion disease, chronic wasting disease (CWD) in particular, as it is spreading through North America."
+
+composite(bp(MESHPP:"Polymorphism, Genetic"), p(HGNC:PRNP)) -- path(MESHD:"Prion Diseases")
+composite(bp(MESHPP:"Polymorphism, Genetic"), p(HGNC:PRNP)) -- path(DO:"chronic wasting disease")
+
+####################################################################
+SET Citation = {"PubMed", "Ann Neurol. 2011 Oct;70(4):532-40. doi: 10.1002/ana.22615.", "22028219"}
+SET Evidence = "In Alzheimer disease (the most prevalent cerebral proteopathy), the two principal aggregating proteins are 
+β-amyloid (Aβ) and tau. "
+
+p(HGNC:MAPT) -- path(MESHD:"Alzheimer Disease")
+
+SET Evidence = " The concept of prionlike induction and spreading of pathogenic proteins recently has been expanded to include aggregates of
+tau, α-synuclein, huntingtin, superoxide dismutase-1, and TDP-43, which characterize such human neurodegenerative disorders as
+frontotemporal lobar degeneration, Parkinson/Lewy body disease, Huntington disease, and amyotrophic lateral sclerosis. "
+
+p(HGNC:MAPT) -- path(MESHD:"Frontotemporal Lobar Degeneration")
+p(HGNC:MAPT) -- path(MESHD:"Parkinson Disease")
+p(HGNC:MAPT) -- path(MESHD:"Huntington Disease")
+p(HGNC:MAPT) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+p(HGNC:SNCA) -- path(MESHD:"Frontotemporal Lobar Degeneration")
+p(HGNC:SNCA) -- path(MESHD:"Parkinson Disease")
+p(HGNC:SNCA) -- path(MESHD:"Huntington Disease")
+p(HGNC:SNCA) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+p(HGNC:HTT) -- path(MESHD:"Frontotemporal Lobar Degeneration")
+p(HGNC:HTT) -- path(MESHD:"Parkinson Disease")
+p(HGNC:HTT) -- path(MESHD:"Huntington Disease")
+p(HGNC:HTT) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+p(HGNC:SOD1) -- path(MESHD:"Frontotemporal Lobar Degeneration")
+p(HGNC:SOD1) -- path(MESHD:"Parkinson Disease")
+p(HGNC:SOD1) -- path(MESHD:"Huntington Disease")
+p(HGNC:SOD1) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+p(HGNC:TARDBP) -- path(MESHD: "Frontotemporal Lobar Degeneration")
+p(HGNC:TARDBP) -- path(MESHD:"Parkinson Disease")
+p(HGNC:TARDBP) -- path(MESHD:"Huntington Disease")
+p(HGNC:TARDBP) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+
+####################################################################
+SET Citation = {"PubMed", "J Cell Sci. 2010 Apr 15;123(Pt 8):1191-201. doi: 10.1242/jcs.051672.", "20356930"}
+SET Evidence = "These infectious phenotypes can be beneficial, as with yeast prions, or deleterious, 
+as with mammalian prions that transmit spongiform encephalopathies. "
+
+p(HGNC:PRNP) -- path(MESHD:"Encephalopathy, Bovine Spongiform")
+
+SET Evidence = "Moreover, two RNA-binding proteins, FUS and TDP-43, which form cytoplasmic aggregates in amyotrophic lateral sclerosis, 
+harbor a 'prion domain' similar to those found in several yeast prion proteins."
+
+r(HGNC:FUS) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+r(HGNC:TARDBP) -- path(MESHD:"Amyotrophic Lateral Sclerosis")
+
+####################################################################
+SET Citation = {"PubMed", "Mol Neurodegener. 2016 Aug 30;11(1):62. doi: 10.1186/s13024-016-0126-z.", "27578006"}
+SET Evidence = "Surprisingly, we here show that one antibody, 4E6, which has low affinity for most forms of tau acutely improved cognition
+and reduced soluble phospho-tau, whereas another antibody, 6B2, which has high affinity for various tau species was ineffective. "
+
+a("antibody 4E6") -> bp(GOBP:"cognition")
+a("antibody 4E6") -| p(HGNC:APP)
+####################################################################  
+SET Citation = {"PubMed", "Ann Neurol. 2016 Aug;80(2):247-58. doi: 10.1002/ana.24711. Epub 2016 Jul 8.", "27323247"}
+SET Evidence = "Our PET study replicated postmortem spreading patterns of tau and amyloid-β pathologies. Unlike the diffuse accumulation 
+of amyloid throughout the neocortex, tau spreading occurred in a stepwise fashion through the networks. "
+SET NervousSystem = "Neocortex"
+
+p(HGNC:APP) -- path(MESHD:"Postmortem Changes")
+
+SET NervousSystem = "Nerve Net"
+
+p(HGNC:MAPT) -- path(MESHD:"Postmortem Changes")
+
+#####################################################################
+SET Citation = {"PubMed", "J Neurochem. 2016 Aug;138 Suppl 1:71-94. doi: 10.1111/jnc.13600. Epub 2016 Jun 15.", "27306859"}
+SET Evidence = "Frontotemporal lobar degeneration (FTLD) has been associated with toxic intracellular aggregates of 
+hyperphosphorylated tau (FTLD-tau)"
+
+phos(p(HGNC:MAPT)) -- path(MESHD:"Frontotemporal Lobar Degeneration") 
+
+SET Evidence = " A disturbed tau distribution, as found in frontotemporal lobar degeneration (FTLD-tau), has severe consequences for 
+cellular physiology: tau accumulates in the neuronal soma and dendrites, leading among others to microtubule depolymerization and 
+impaired axonal transport. "
+
+phos(p(HGNC:MAPT)) -> bp(GOBP:"microtubule depolymerization")
+phos(p(HGNC:MAPT)) -> bp(MESHPP:"Axonal Transport")
+
+SET Evidence = "Neuronal communication is gradually lost as toxic tau accumulates in dendritic spines with subsequent degeneration of 
+synapses and synaptic loss."
+SET NervousSystem = "Dendritic Spines"
+
+p(HGNC:MAPT) -| bp(MESHPP:"Neural Conduction")
+
+######################################################################
+SET Citation = {"PubMed", "J Alzheimers Dis. 2016;51(2):345-56. doi: 10.3233/JAD-150859.", "26890756"}
+SET NervousSystem = "Brain"
+SET Evidence = "Tau becomes excessively phosphorylated in Alzheimer's disease (AD) and is widely studied within the brain. "
+
+phos(p(HGNC:MAPT)) -- path(MESHD:"Alzheimer Disease")
+
+SET Evidence = "Further examination of the extent and types of tau present in peripheral tissues and their relation to AD is warranted 
+given recent publications on pathologic spreading. "
+SET Anatomy = "peripheral nervous system"
+
+p(HGNC:MAPT) -- path(MESHD:"Alzheimer Disease")
+
+#########################################################################
+SET Citation = {"PubMed", "J Alzheimers Dis. 2015;50(1):77-87. doi: 10.3233/JAD-150704.", "26638867"}
+SET Evidence = "The microtubule-associated protein (MAP) tau plays a critical role in the pathogenesis of tauopathies."
+
+p(HGNC:MAPT) -- path(MESHD:"Tauopathies")
+
+#########################################################################
+SET Citation = {"PubMed", "Biomed Res Int. 2015;2015:152926. doi: 10.1155/2015/152926. Epub 2015 Oct 25.", "26583089"}
+SET Evidence = "Like other cancer cells, brain tumours can use EVs to secrete factors, which allow escaping from immune surveillance, 
+and to transfer molecules into the surrounding cells, thus transforming their phenotype"
+
+complex(GOCC:"extracellular vesicle") -| bp(MESHPP:"Immunologic Surveillance")
+
+SET Evidence = "Intriguingly, EVs seem to be also involved in spreading through the brain of aggregated proteins, 
+such as prions and aggregated tau protein."
+
+complex(GOCC:"extracellular vesicle") -- p(HGNC:PRNP)
+complex(GOCC:"extracellular vesicle") -- p(HGNC:MAPT)
+
+SET Evidence = "Herein we summarize possible roles of EVs in brain physiological functions and discuss their involvement in 
+the horizontal spreading, from cell to cell, of both cancer and neurodegenerative pathologies."
+
+complex(GOCC:"extracellular vesicle") -- path(DO:"cancer")
+complex(GOCC:"extracellular vesicle") -- path(MESHD:"Neurodegenerative Diseases")
+
+#############################################################################
+
+UNSET STATEMENT_GROUP
+
+
+
+
+
+
+
+
+
+
