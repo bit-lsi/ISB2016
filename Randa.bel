@@ -1,0 +1,470 @@
+##################################################################################
+# Document Properties Section
+
+SET DOCUMENT Name = "Document name"
+SET DOCUMENT Description = "Document description"
+SET DOCUMENT Version = "1.0"
+SET DOCUMENT Copyright = "Copyright (c) 2012, randa. All Rights Reserved."
+SET DOCUMENT Authors = "randa"
+SET DOCUMENT Licenses = "Document license"
+SET DOCUMENT ContactInfo = "your@email.com"
+
+##################################################################################
+# Definitions Section
+
+# NAMESPACE URLS
+
+DEFINE NAMESPACE ADO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/ADO.belns"
+DEFINE NAMESPACE AFFX AS URL "http://resource.belframework.org/belframework/20150611/namespace/affy-probeset-ids.belns"
+DEFINE NAMESPACE BRCO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/BRCO.belns"
+DEFINE NAMESPACE CHEBI AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi.belns"
+DEFINE NAMESPACE CHEBIID AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi-ids.belns"
+DEFINE NAMESPACE CHEMBL AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-names.belns"
+DEFINE NAMESPACE CHEMBLID AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-ids.belns"
+DEFINE NAMESPACE CTO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/CTO.belns"
+DEFINE NAMESPACE DO AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology.belns"
+DEFINE NAMESPACE DOID AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology-ids.belns"
+DEFINE NAMESPACE EGID AS URL "http://resource.belframework.org/belframework/20150611/namespace/entrez-gene-ids.belns"
+DEFINE NAMESPACE FlyBase AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Dmel.belns"
+DEFINE NAMESPACE GOBP AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process.belns"
+DEFINE NAMESPACE GOBPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process-ids.belns"
+DEFINE NAMESPACE GOCC AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component.belns"
+DEFINE NAMESPACE GOCCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component-ids.belns"
+DEFINE NAMESPACE HGNC AS URL "http://resource.belframework.org/belframework/20150611/namespace/hgnc-human-genes.belns"
+DEFINE NAMESPACE LMSD AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/LMSD.belns"
+DEFINE NAMESPACE MESHC AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals.belns"
+DEFINE NAMESPACE MESHCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals-ids.belns"
+DEFINE NAMESPACE MESHCS AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures.belns"
+DEFINE NAMESPACE MESHCSID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures-ids.belns"
+DEFINE NAMESPACE MESHD AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases.belns"
+DEFINE NAMESPACE MESHDID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases-ids.belns"
+DEFINE NAMESPACE MESHPP AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes.belns"
+DEFINE NAMESPACE MESHPPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes-ids.belns"
+DEFINE NAMESPACE MGI AS URL "http://resource.belframework.org/belframework/20150611/namespace/mgi-mouse-genes.belns"
+DEFINE NAMESPACE NIFT AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/NIFT.belns"
+DEFINE NAMESPACE NTN AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Nutrition.belns"
+DEFINE NAMESPACE PDO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PDO.belns"
+DEFINE NAMESPACE PH AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/Placeholder.belns"
+DEFINE NAMESPACE PMIBP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmibp.belns"
+DEFINE NAMESPACE PMICHEM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmichem.belns"
+DEFINE NAMESPACE PMICOMP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmicomp.belns"
+DEFINE NAMESPACE PMIDIS AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmidis.belns"
+DEFINE NAMESPACE PMIPFAM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmipfam.belns"
+DEFINE NAMESPACE PTS AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PTS.belns"
+DEFINE NAMESPACE RGD AS URL "http://resource.belframework.org/belframework/20150611/namespace/rgd-rat-genes.belns"
+DEFINE NAMESPACE SCHEM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-chemicals.belns"
+DEFINE NAMESPACE SCOMP AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-named-complexes.belns"
+DEFINE NAMESPACE SDIS AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-diseases.belns"
+DEFINE NAMESPACE SFAM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-protein-families.belns"
+DEFINE NAMESPACE SP AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot.belns"
+DEFINE NAMESPACE SPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot-ids.belns"
+DEFINE NAMESPACE dbSNP AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/SNP.belns"
+
+
+# ANNOTATION URLS
+
+DEFINE ANNOTATION Anatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/anatomy.belanno"
+DEFINE ANNOTATION BodyRegion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-body-region.belanno"
+DEFINE ANNOTATION CardiovascularSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-cardiovascular-system.belanno"
+DEFINE ANNOTATION Cell AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell.belanno"
+DEFINE ANNOTATION CellLine AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-line.belanno"
+DEFINE ANNOTATION CellStructure AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-structure.belanno"
+DEFINE ANNOTATION DigestiveSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-digestive-system.belanno"
+DEFINE ANNOTATION Disease AS URL "http://resource.belframework.org/belframework/20131211/annotation/disease.belanno"
+DEFINE ANNOTATION FluidAndSecretion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-fluid-and-secretion.belanno"
+DEFINE ANNOTATION HemicAndImmuneSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-hemic-and-immune-system.belanno"
+DEFINE ANNOTATION IntegumentarySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-integumentary-system.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-anatomy.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-diseases.belanno"
+DEFINE ANNOTATION NervousSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-nervous-system.belanno"
+DEFINE ANNOTATION RespiratorySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-respiratory-system.belanno"
+DEFINE ANNOTATION Species AS URL "http://resource.belframework.org/belframework/20131211/annotation/species-taxonomy-id.belanno"
+DEFINE ANNOTATION Tissue AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-tissue.belanno"
+DEFINE ANNOTATION UrogenitalSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-urogenital-system.belanno"
+
+
+##################################################################################
+# Statements Section
+
+SET STATEMENT_GROUP = "Group 1"
+########
+SET Species= "9606"
+SET Citation ={"PubMed","J Neuropathol Exp Neurol. 2008 Oct;67(10):1001-10. doi: 10.1097/NEN.0b013e318188b204","18800007"}
+
+SET Evidence="Chronic microglial activation is an important component of many neurological disorders, and imaging activated microglia in vivo will 
+enable the detection and improved treatment of neuroinflammation"
+a(BRCO:Microglia) positiveCorrelation path(ADO:neuroinflammation)
+
+
+SET Evidence="We hypothesized that N-(2,5-dimethoxybenzyl)-N-(4-fluoro-2-phenoxyphenyl) acetamide (DAA1106), a new ligand that binds specifically to 
+peripheral benzodiazepine receptor, binds to activated microglia in human neurological diseases with higher affinity than does PK11195"
+complex(a("N-(2,5-dimethoxybenzyl)-N-(4-fluoro-2-phenoxyphenyl) acetamide"),a(BRCO:Microglia))
+ 
+SET Evidence="1-(2-chlorphenyl)-N-methyl-N-(1-methylpropyl)-3-isoquinoline-carbox-amide (PK11195), a peripheral benzodiazepine receptor ligand, has been used to image neuroinflammation, but the extent to which PK11195 binding distinguishes activated microglia and reactive astrocytes is unclear. Moreover, PK11195 may lack sufficient sensitivity for detecting mild neuroinflammation. We hypothesized that N-(2,5-dimethoxybenzyl)-N-(4-fluoro-2-phenoxyphenyl) acetamide (DAA1106), a new ligand that binds specifically to peripheral benzodiazepine receptor, binds to activated microglia in human neurological diseases with higher affinity than does PK11195. We therefore compared the pharmacological binding properties of [3H](R)-PK11195 and [3H]DAA1106 in postmortem tissues from patients with cerebral infarcts, amyotrophic lateral sclerosis, Alzheimer disease, frontotemporal dementia, and multiple sclerosis (n=10 each). In all diseases, [3H]DAA1106 showed a higher binding affinity as reflected by lower dissociation constant (KD) values than that of [3H](R)-PK11195. Moreover, specific binding of both ligands correlated with the presence of activated microglia identified by immunohistochemistry in situ."
+a(BRCO:Microglia) positiveCorrelation a("1-(2-chlorphenyl)-N-methyl-N-(1-methylpropyl)-3-isoquinoline-carbox-amid")
+a(BRCO:Microglia) positiveCorrelation a("N-(2,5-dimethoxybenzyl)-N-(4-fluoro-2-phenoxyphenyl) acetamide")
+
+
+
+
+
+#######
+SET Species="10090"
+
+SET Citation= {"PubMed","Mol Neurodegener. 2008 Oct 3;3:14. doi: 10.1186/1750-1326-3-14}","18834536"}
+
+
+SET Evidence="Familial Alzheimer's disease-linked variants of presenilin (PSEN1 and PSEN2) contribute to the pathophysiology of disease by both gain-of-function and loss-of-function mechanisms. "
+g(MGI:Psen1)-- path(DO:"Alzheimer's disease")
+g(MGI:Psen2)-- path(DO:"Alzheimer's disease")
+  
+SET Evidence= "Our data suggest that combined deficiencies of PSEN1 and PSEN2 results in a progressive, age-dependent transcriptome signature related 
+to neurodegeneration and neuroinflammation. While these events may progress differently in the hippocampus and frontal cortex, the most critical 
+expression signatures are common across the two brain regions, and involve a strong upregulation of cathepsin and complement system transcripts."
+g(MGI:Psen1) negativeCorrelation path(ADO:neuroinflammation)
+g(MGI:Psen1) negativeCorrelation path(ADO:"neurodegenerative")
+g(MGI:Psen1) negativeCorrelation path(ADO:neuroinflammation)
+g(MGI:Psen1) negativeCorrelation path(ADO:"neurodegenerative_disease")
+g(MGI:Psen1) negativeCorrelation p(MGI:Ctsa)
+g(MGI:Psen2) negativeCorrelation p(MGI:Ctsa)
+
+
+
+SET Evidence="Furthermore, our results suggest that the evaluation of inhibitors of PS/gamma-secretase activity for treatment of Alzheimer's Disease must include close monitoring for signs of calpain-cathepsin system activation."
+a("PS/gamma-secretase") negativeCorrelation path(DO:"Alzheimer's disease")
+
+
+# Add statements below this comment
+##########
+SET Species="9606"
+
+SET Citation= {"PubMed","Mol Psychiatry. 2009 Mar;14(3):239-51. doi: 10.1038/mp.2008.115. Epub 2008 Oct 28","18957942"}
+
+SET Evidence="The focus of the majority of this research has been on (1) active immunotherapy using the pre-aggregated synthetic beta-amyloid (Abeta) 42 preparation AN1792 vaccine (QS-21), or (2) passive immunization using injections of already prepared polyclonal anti-Abeta antibodies (intravenous immunoglobulin). These two clinical approaches to the treatment of patients with AD represent the focus of this review."
+
+a(CHEBI:"beta-amyloid") negativeCorrelation path(DO:"Alzheimer's disease")
+a(" polyclonal anti-Abeta antibodies") negativeCorrelation path(DO:"Alzheimer's disease")
+
+
+
+
+##########
+SET Species="9606"
+
+SET Citation= {"PubMed","Neurochem Int. 2009 Jan;54(1):28-36. doi: 10.1016/j.neuint.2008.10.001. Epub 2008 Oct 15","18984021"}
+
+SET Evidence="The binding of two radiolabelled analogues (N-(5-[125I]Iodo-2-phenoxyphenyl)-N-(2,5-dimethoxybenzyl)acetamide ([125I]desfluoro-DAA1106) 
+and N-(5-[125I]Fluoro-2-phenoxyphenyl)-N-(2-[125I]Iodo-5-methoxybenzyl)acetamide ([125I]desmethoxy-DAA1106) of the peripheral benzodiazepine receptor 
+(PBR) (or TSPO, 18kDa translocator protein) ligand DAA1106 was examined by in vitro autoradiography on human post mortem whole hemisphere brain slices 
+obtained from Alzheimer's disease (AD) patients and age-matched controls.Both [(125)I]desfluoro-IDAA1106 and [(125)I]desmethoxy-IDAA1106 were 
+effectively binding to various brain structures. The binding could be blocked by the unlabelled ligand as well as by other PBR specific ligands. 
+With both radiolabelled compounds, the binding showed regional inhomogeneity and the specific binding values proved to be the highest in the 
+hippocampus, temporal and parietal cortex, the basal ganglia and thalamus in the AD brains. Compared with age-matched control brains, specific 
+binding in several brain structures (temporal and parietal lobes, thalamus and white matter) in Alzheimer brains was significantly higher, 
+indicating that the radioligands can effectively label-activated microglia and the up-regulated PBR/TSPO system in AD."
+
+SET Cell = {"astrocyte of the hippocampus","astrocyte of the cerebral cortex"}
+
+a("(N-(5-[125I]Iodo-2-phenoxyphenyl)-N-(2,5-dimethoxybenzyl)acetamide") positiveCorrelation path(DO:"Alzheimer's disease")
+a("N-(5-[125I]Fluoro-2-phenoxyphenyl)-N-(2-[125I]Iodo-5-methoxybenzyl)acetamide") positiveCorrelation path(DO:"Alzheimer's disease")
+complex(a("(N-(5-[125I]Iodo-2-phenoxyphenyl)-N-(2,5-dimethoxybenzyl)acetamide"),a(BRCO:Microglia))
+complex(a("N-(5-[125I]Fluoro-2-phenoxyphenyl)-N-(2-[125I]Iodo-5-methoxybenzyl)acetamide"),a(BRCO:Microglia))
+
+SET Evidence="Complementary immunohistochemical studies demonstrated reactive microglia activation in the AD brain tissue and indicated that increased ligand binding coincides with increased regional microglia activation due to neuroinflammation."
+path(ADO:neuroinflammation) increases a(BRCO:Microglia)
+
+
+UNSET cell
+##########
+SET Species="10090"
+SET Citation= {"PubMed","J Neurovirol. 2008 Nov;14(6):492-502. doi: 10.1080/13550280802345723","19016073"}
+
+SET Evidence="Toll-like receptor 7 (TLR7) recognizes guanidine-rich single-stranded (ss) viral RNA and is an important mediator of peripheral immune 
+responses to several ssRNA viruses."
+
+p(MGI:Tlr7) association a("immune response")
+SET Evidence="This is particularly true in the central nervous system (CNS) where microglia and astrocytes are often the first cells responding to virus infection instead of dendritic cells."
+a("virus infection") increases a(BRCO:Microglia) 
+a("virus infection") increases a(BRCO:Astrocyte) 
+
+
+SET Evidence=" The authors found that TLR7 was necessary for the early production of certain cytokines and chemokines, including CCL2 and tumor necrosis factor (TNF) and was also involved in the early activation of astrocytes."
+p(MGI:Tlr7) positiveCorrelation p(MGI:Ccl2)
+p(MGI:Tlr7) positiveCorrelation p(MGI:Tnf)
+p(MGI:Tlr7) positiveCorrelation a(BRCO:Astrocyte) 
+
+
+
+###########
+SET Species="10090"
+SET Citation= {"PubMed", "Glia. 2009 Jun;57(8):875-83. doi: 10.1002/glia.20813" , "19053059"}
+
+SET Evidence="Microglial cells, the macrophages of the brain, play an essential role in the propagation of neuroinflammation"
+a(BRCO:Microglia) positiveCorrelation path(ADO:neuroinflammation)
+
+SET Evidence="Increased microglial cell migration in response to specific chemoattractants has been documented, but less is known about the differences between these stimuli and the signal transduction pathways that mediate their effects."
+SET Cell = "microglial cell"
+a(chemoattractants) positiveCorrelation bp(GOBP:"cell migration")  
+
+
+SET Evidence=" Here we present an improved and higher-throughput Boyden chamber technique that measures microglial cell migration by using DRAQ5, a nuclear dye that emits in the near-infrared."
+a(CHEBI:"DRAQ5 dye") association bp(GOBP:"cell migration")
+
+SET Evidence="Out of a panel of chemoattractants tested, we found that ATP and C5a potently stimulate the migration of mouse primary microglial cells."
+a(CHEBI:ATP) positiveCorrelation bp(GOBP:"cell migration")
+a(CHEBI:"C5-acylcarnitine") positiveCorrelation bp(GOBP:"cell migration")
+
+SET Evidence="Accordingly, we found key differences in these responses: ATP stimulated a combination of both chemokinesis and chemotaxis, and this response was mediated by the ROCK signaling pathway; whereas C5a stimulated only chemotaxis and this response was mediated by the Rac1 signaling pathway."
+a(CHEBI:ATP) positiveCorrelation bp(GOBP:chemokinesis)
+a(CHEBI:ATP) positiveCorrelation bp(GOBP:"cell chemotaxis")
+a(CHEBI:"C5-acylcarnitine") positiveCorrelation bp(GOBP:"cell chemotaxis")
+
+SET Evidence="Finally, we found that functional PI3-kinase is only required for random basal microglial cell migration."
+p(MGI:Pik3c3) association bp(GOBP:"cell migration")
+
+UNSET Cell
+###########
+SET Species="10090"
+SET Citation= {"PubMed","Acta Neuropathol. 2009 Jul;118(1):71-86. doi: 10.1007/s00401-009-0499-y. Epub 2009 Feb 24","19238406"}
+
+SET Evidence="Human tauopathies represent a heterogeneous group of neurodegenerative disorders such as Alzheimer's disease (AD) that are characterized by the presence of intracellular accumulations of abnormal filaments of protein tau"
+p(HGNC:MAPT) association path(DO:"Alzheimer's disease")
+
+SET Evidence="In this review we will provide an up-to-date account of various facets of the tau neurodegenerative cascade with a special emphasis on the evolution of neurofibrillary tangles, neuronal death and neuroinflammation"
+p(HGNC:MAPT) association path(ADO:neuroinflammation)
+p(HGNC:MAPT) association a("neurofibrillary tangles")
+p(HGNC:MAPT) association bp(GOBP:"neuron death")
+
+
+
+##############
+
+SET Species="10090"
+SET Citation = {"PubMed","Matrix Biol. 2009 Apr;28(3):148-59. doi: 10.1016/j.matbio.2009.02.002. Epub 2009 Mar 3","19264129"}
+
+SET Evidence="Matrix metalloproteinases (MMPs) are enzymes with specificity towards extracellular matrix (ECM) components."
+a(MMPs) association a(GOCC:"extracellular matrix component")
+
+SET Evidence="MMPs, especially MMP-9, have been shown to degrade components of the basal lamina and disrupt the blood-brain barrier (BBB) and thus, contribute to neuroinflammation. "
+p(MGI:Mmp9) negativeCorrelation a(GOCC:"basal lamina")
+p(MGI:Mmp9) negativeCorrelation a("blood-brain barrier")
+p(MGI:Mmp9) positiveCorrelation path(ADO:neuroinflammation)
+
+
+SET Evidence="We observed enhanced and prolonged neuroinflammation in MMP-9-null mice, evidenced by persistence of neutrophils, macrophages/microglia, and reactive astrocytes up to 8 wks post-implantation.In addition, blood vessel density around implants was increased in MMP-9-null mice and detection of mouse serum albumin (MSA) indicated that vessels were leaky. Immunohistochemical and western blot analyses indicated that this defect was associated with the absence of tight junction proteins zonula occludens-1 (ZO-1) and ZO-2 from vessels in proximity to implants."
+p(MGI:Mmp9) negativeCorrelation path(ADO:neuroinflammation)
+p(MGI:Mmp9) negativeCorrelation a(neutrophils)
+p(MGI:Mmp9) negativeCorrelation bp(GOBP:macrophage activation)
+p(MGI:Mmp9) negativeCorrelation a(BRCO:Microglia)
+p(MGI:Mmp9) negativeCorrelation a(BRCO:Astrocyte)
+p(MGI:Mmp9) positiveCorrelation p(MGI:Tjp1)
+p(MGI:Mmp9) positiveCorrelation p(MGI:Tjp2)
+
+SET Evidence="Analysis of brain sections and brain protein extracts revealed that the levels of the pro-inflammatory cytokine interleukin-1beta 
+(IL-1beta), which is a substrate for MMP-9, were significantly higher in MMP-9-null mice at 8wks post-implantation. Collectively, our studies suggest
+ that increased levels of IL-1beta and the delayed repair of BBB are associated with prolongation of the FBR in MMP-9-null mice."
+p(MGI:Mmp9) negativeCorrelation p(MGI:Il1b)
+p(MGI:Il1b) positiveCorrelation a(FBR)
+
+
+#########
+SET Species="10090"
+
+SET Citation = {"PubMed","Mol Ther. 2009 May;17(5):803-9. doi: 10.1038/mt.2009.44. Epub 2009 Mar 10.","19277012"}
+
+SET Evidence="Following amyloid plaque formation, reactive microglia and astrocytes accumulate around plaques and cause neuroinflammation."
+a(ADO:Microglia) positiveCorrelation path(ADO:neuroinflammation)
+a(BRCO:Astrocyte) positiveCorrelation path(ADO:neuroinflammation)
+
+SET Evidence="Here brain chemokines play a major role for the glial accumulation."
+
+p(SFAM:"Chemokine Receptor Family") positiveCorrelation a(glia)
+
+SET Evidence="We have previously shown that transgenic overexpression of chemokine CCL2 in the brain results in increased microglial accumulation and diffuse amyloid plaque deposition in a transgenic mouse model of AD expressing Swedish amyloid precursor protein (APP) mutant"
+p(MGI:Ccl2) positiveCorrelation a(ADO:Microglia)
+
+SET Evidence="Here, we report that adeno-associated virus (AAV) serotype 1 and 2 hybrid efficiently deliver 7ND gene, a dominant-negative CCL2 mutant, 
+in a dose-response manner and express >1,000-fold higher recombinant CCL2 than basal levels after a single administration"
+a(AAV) positiveCorrelation a("7ND gene")
+
+SET Evidence="AAV1/2 hybrid virus principally infected neurons without neuroinflammation with sustained expression for 6-months."
+a("AAV1/2") causesNoChange path(ADO:neuroinflammation)
+   
+SET Evidence="7ND expressed in APP/presenilin-1 (APP/PS1) bigenic mice reduced astro/microgliosis, beta-amyloidosis, including suppression of both fibrillar and oligomer Abeta accumulation, and improved spatial learning."
+a("7ND gene") association p(MGI:App)
+a("7ND gene") association p(MGI:Psen1)
+a("7ND gene") negativeCorrelation a("microgliosis")
+a("7ND gene") negativeCorrelation a("beta-amyloidosis")
+a("7ND gene") negativeCorrelation a("fibrillar Abeta")
+a("7ND gene") negativeCorrelation a("oligomer Abeta")
+
+SET Evidence="Our data support the idea that the AAV1/2 system is a useful tool for CNS gene delivery, and suppression of CCL2 may be a therapeutic target for the amelioration of AD-related neuroinflammation."
+p(MGI:Ccl2) negativeCorrelation path(ADO:neuroinflammation)
+
+
+##########
+SET Species="10090"
+SET Citation = {"PubMed","Astrocyte- and endothelial-targeted CCL2 conditional knockout mice: critical tools for studying the pathogenesis of neuroinflammation.","19340610"}
+
+SET Evidence="While the expression of the C-C chemokine ligand 2 (CCL2) in the central nervous system (CNS) is associated with numerous neuroinflammatory conditions, the critical cellular sources of this chemokine, which is responsible for disease processes-as well as associated pathogenic mechanisms, remain unresolved."
+p(MGI:Ccl2) association path(ADO:neuroinflammation)
+p(SFAM:"Chemokine Receptor Family") association bp(GOBP:pathogenesis)
+p(SFAM:"Chemokine Receptor Family")  association path(MESHD:Disease)
+
+
+SET Evidence=" In vivo analysis further revealed apparent cross-talk between BMEC and astrocytes regarding the regulation of astrocyte CCL2 expression."
+a(BMEC) association p(MGI:Ccl2)
+a(MGI:astrocytes) association p(MGI:Ccl2)
+
+SET Species="10090"
+#########
+SET Citation = {"PubMed","Biochem Biophys Res Commun. 2009 Jul 10;384(4):466-70. doi: 10.1016/j.bbrc.2009.04.153. Epub 2009 May 5","19422789"}
+
+SET Evidence="Recent clinical studies have identified an association between APOE 4 and cognitive deficits in patients with multiple sclerosis."
+SET Disease = "multiple sclerosis"
+a("Apoe 4") association path(PDO:"Cognitive_abnormality")
+UNSET Disease
+
+SET Evidence="We induced experimental autoimmune encephalomyelitis (EAE) in APOE knockout (KO) and human APOE 4 knockin (E4) mice to study the interaction of APOE and neuroinflammation on cognition. After EAE induction, KO and E4 showed significant deficits in spatial learning and recall."
+SET Disease= "Encephalomyelitis"
+p(MGI:"Apoe") positiveCorrelation a("spatial learning")
+p(MGI:"Apoe") positiveCorrelation a("recall")
+a("APOE 4") negativeCorrelation a("spatial learning")
+a("APOE 4") negativeCorrelation a("recall")
+UNSET Disease
+
+
+#########
+SET Species="10090"
+SET Citation = {"PubMed","Neuroscience. 2009 Sep 15;162(4):1220-31. doi: 10.1016/j.neuroscience.2009.05.019. Epub 2009 May 14.","19447162"}
+
+SET Evidence="Alzheimer's disease (AD) is characterized by memory loss and the upregulation of pro-neuroinflammatory factors such as cRaf-1, cyclooxygenase-2 (Cox-2), and the nuclear factor kappa B (NF-kappaB), as well as a downregulation of protein kinase A (PKA) activity and the activation by phosphorylation of its downstream factor CREB."
+p(MGI:Raf1) positiveCorrelation path(MESHD:"Alzheimer Disease")
+a(CHEBI:"cyclooxygenase 2 inhibitor") positiveCorrelation path(MESHD:"Alzheimer Disease")
+p(MGI:Nfkb1) positiveCorrelation path(MESHD:"Alzheimer Disease")
+p(MGI:Prkaca)  negativeCorrelation path(MESHD:"Alzheimer Disease")
+p(MGI:Creb1) negativeCorrelation path(MESHD:"Alzheimer Disease")
+
+SET Evidence="We found that chronic treatment with sorafenib stimulated PKA and CREB phosphorylation and inhibited cRaf-1 and NF-kappaB in the brains of APPswe mice."
+a(CHEBI:sorafenib) positiveCorrelation p(MGI:Prkaca)
+a(CHEBI:sorafenib) positiveCorrelation p(MGI:Creb1)
+a(CHEBI:sorafenib) negativeCorrelation p(MGI:Raf1)
+a(CHEBI:sorafenib) negativeCorrelation p(MGI:Nfkb1)
+
+SET Evidence="NF-kappaB controls the expression of several genes related to AD pathology, including iNOS and Cox-(2)Concurrent with NF-kappaB inhibition, sorafenib treatment decreased the cerebral expression of Cox-2 and iNOS in APPswe mice."
+p(MGI:Nfkb1) association p(MGI:Nos1)
+p(MGI:Nfkb1) association p(MGI:Ptgs2)
+a(CHEBI:sorafenib) negativeCorrelation p(MGI:Nos1)
+a(CHEBI:sorafenib) negativeCorrelation p(MGI:Ptgs2)
+
+SET Evidence="It has recently been observed that Cox-2 inhibition prevents cognitive impairment in a mouse model of AD and amyloid beta peptide (Abeta)-induced inhibition of long-term potentiation (LTP). "
+p(MGI:Ptgs2) negativeCorrelation path(DOID:"cognitive disorder")
+
+SET Evidence="Consistent with the idea that Cox-2 inhibition can improve cognitive abilities, we found that sorafenib restored working memory abilities in aged APPswe mice without reducing Abeta levels in the brain. These findings suggest that sorafenib reduced AD pathology by reducing neuroinflammation."
+p(MGI:Ptgs2) positiveCorrelation a("cognitive abilities")
+a(CHEBI:sorafenib) positiveCorrelation bp(GOBP:memory)
+a(CHEBI:sorafenib) causesNoChange p(MGI:App)
+
+SET Evidence="These findings suggest that sorafenib reduced AD pathology by reducing neuroinflammation."
+SET Disease= "Alzheimer's disease"
+a(CHEBI:sorafenib) negativeCorrelation path(ADO:neuroinflammation)
+UNSET Disease
+
+
+#########
+
+SET Species="10090"
+SET Citation = {"PubMed","Eur J Neurosci. 2009 Jun;29(11):2177-86. doi: 10.1111/j.1460-9568.2009.06764.x. Epub 2009 May 21.", "19490092"}
+
+
+SET Evidence="Parkinson's disease (PD) is characterized by the progressive loss of nigrostriatal dopamine neurons leading to motor disturbances and cognitive impairment."
+SET Disease= "Parkinson's disease"
+a(CHEBI:dopamine) negativeCorrelation path(MESHD:"Parkinson Disease")
+a(CHEBI:dopamine) negativeCorrelation a("motor disturbances")
+a(CHEBI:dopamine) negativeCorrelation a("cognitive impairment")
+UNSET Disease
+
+SET Evidence="In this study, we investigated the molecular mechanisms by which the non-selective cannabinoid receptor agonist WIN55,212-2 (WIN) protects mouse nigrostriatal neurons from 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP)-induced neurotoxicity and neuroinflammation. "
+a(CHEBI:"cannabinoid receptor agonist") negativeCorrelation a("neurotoxicity")
+a(CHEBI:"cannabinoid receptor agonist") negativeCorrelation path(ADO:neuroinflammation)
+
+SET Evidence="At 3 days post-MPTP, we found significant microglial activation and up-regulation of CB2 cannabinoid receptors in the ventral midbrain. 
+Treatment"
+a(CHEBI:"1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine") positiveCorrelation act(a(BRCO:Microglia))
+a(CHEBI:"1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine") positiveCorrelation p(MGI:Cnr2)
+
+SET Evidence="Treatment with WIN or the CB2 receptor agonist JWH015 (4 mg/kg, intraperitoneal) reduced MPTP-induced microglial activation, whereas genetic ablation of CB2 receptors exacerbated MPTP systemic toxicity. "
+a(CHEBI:"cannabinoid receptor agonist") negativeCorrelation act(a(BRCO:Microglia))
+a("CB2 receptor agonist") negativeCorrelation   act(a(BRCO:Microglia))
+
+SET Evidence="In conclusion, our data indicate that agonism at CB2 cannabinoid receptors protects against MPTP-induced nigrostriatal degeneration by inhibiting microglial activation/infiltration and suggest that CB2 receptors represent a new therapeutic target to slow the degenerative process occurring in PD."
+a(CHEBI:"CB2 receptor antagonist") negativeCorrelation act(a(BRCO:Microglia))
+
+
+###########
+SET Species="10090"
+SET Citation = {"PubMed","Toxicol Appl Pharmacol. 2009 Oct 15;240(2):219-25. doi: 10.1016/j.taap.2009.07.004. Epub 2009 Jul 14.","19607852"}
+
+SET Evidence="Exposure to excessive manganese (Mn) levels results in neurotoxicity to the extrapyramidal system and the development of Parkinson's disease (PD)-like movement disorder, referred to as manganism."
+a(CHEBI:"manganese atom") positiveCorrelation a(neurotoxicity)
+a(CHEBI:"manganese atom") positiveCorrelation path(DO:"Parkinson's disease")
+
+SET Evidence="Although the mechanisms by which Mn induces neuronal damage are not well defined, its neurotoxicity appears to be regulated by a number of factors, including oxidative injury, mitochondrial dysfunction and neuroinflammation."
+path(ADO:neuroinflammation) positiveCorrelation a(CHEBI:"manganese atom")
+a("oxidative injury") positiveCorrelation a(CHEBI:"manganese atom")
+bp("mitochondrial dysfunction") positiveCorrelation a(CHEBI:"manganese atom")
+
+SET Evidence=" Primary cortical neuronal cultures showed concentration-dependent alterations in biomarkers of oxidative damage, F2-isoprostanes (F2-IsoPs) and mitochondrial dysfunction (ATP), as early as 2 h following Mn exposure."
+a(CHEBI:"manganese atom") association a("F2-Isoprostanes")
+a(CHEBI:"manganese atom") association a(CHEBI:ATP)
+
+SET Evidence="Treatment of neurons with 500 microM Mn also resulted in time-dependent increases in the levels of the inflammatory biomarker, prostaglandin E2 (PGE2). In vivo analyses corroborated these findings, establishing that either a single or three (100 mg/kg, s.c.) Mn injections (days 1, 4 and 7) induced significant increases in F2-IsoPs and PGE2 in adult mouse brain 24 h following the last injection. "
+
+a(CHEBI:"manganese atom") positiveCorrelation a(CHEBI:"prostaglandin E2")
+a(CHEBI:"manganese atom") positiveCorrelation a("F2-Isoprostanes")
+SET Evidence=""
+
+
+###########
+SET Species="9606"
+SET Citation = {"PubMed","J Nucl Med. 2009 Aug;50(8):1276-82. doi: 10.2967/jnumed.109.062265. Epub 2009 Jul 17.","19617321"}
+
+SET Evidence="Translocator protein (TSPO) is upregulated in activated microglia and thus can serve as a marker of neuroinflammation."
+p(HGNC:TSPO) positiveCorrelation act(a(BRCO:Microglia))
+p(HGNC:TSPO) association path(ADO:neuroinflammation)
+
+SET Evidence=" Recently, a novel radioligand, (11)C-N,N-diethyl-2-[2-(4-methoxyphenyl)-5,7-dimethyl-pyrazolo[1,5-a]pyrimidin-3-yl]-acetamide ((11)C-DPA-713), 
+has been described that binds to TSPO with high affinity."
+a("(11)C-N,N-diethyl-2-[2-(4-methoxyphenyl)-5,7-dimethyl-pyrazolo[1,5-a]pyrimidin-3-yl]-acetamide ((11)C-DPA-713)") association p(HGNC:TSPO)
+
+
+SET Evidence="This initial study in humans shows that (11)C-DPA-713 is a promising ligand for evaluating TSPO binding with PET."
+a("(11)C-DPA-713 ") association complex( p(HGNC:TSPO),a(CHEBI:"poly(ethylene terephthalate) macromolecule"))
+
+
+
+##############
+SET Species="9606"
+SET Citation = {"PubMed","PLoS One. 2009 Aug 5;4(8):e6517. doi: 10.1371/journal.pone.0006517.","19654865"}
+
+SET Evidence="Human T-lymphotropic virus type 1 (HTLV-1) is a human retrovirus associated with both HTLV-1-associated myelopathy/tropical spastic paraparesis (HAM/TSP), which is a chronic neuroinflammatory disease, and adult T-cell leukemia (ATL)."
+a("HTLV-1") association path(ADO:neuroinflammation)
+a("HTLV-1") association a("HAM/TSP")
+a("HTLV-1") association path(DO:"adult T-cell leukemia")
+
+SET Evidence="Here, we demonstrate that CD4(+)CD25(+)CCR4(+) T cells are the predominant viral reservoir, and their levels are increased in HAM/TSP patients. "
+a(" CD4(+)CD25(+)CCR4(+) T cells") positiveCorrelation a("HAM/TSP")
+
+
+SET Evidence="While CCR4 is known to be selectively expressed on T helper type 2 (Th2), Th17, and regulatory T (Treg) cells in healthy individuals, we demonstrate that IFN-gamma production is extraordinarily increased and IL-4, IL-10, IL-17, and Foxp3 expression is decreased in the CD4(+)CD25(+)CCR4(+) T cells of HAM/TSP patients as compared to those in healthy individuals, and the alteration in function is specific to this cell subtype."
+g(HGNC:"CCR4") positiveCorrelation g(HGNC:"IFNG")
+g(HGNC:"CCR4") negativeCorrelation g(HGNC:"IL4")
+g(HGNC:"CCR4") negativeCorrelation g(HGNC:"IL10")
+g(HGNC:"CCR4") negativeCorrelation a("IL-17")
+g(HGNC:"CCR4") negativeCorrelation g(HGNC:"FOXP3")
+
+
+
+###############
+UNSET STATEMENT_GROUP
+
