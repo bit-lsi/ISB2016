@@ -1,0 +1,381 @@
+##################################################################################
+# Document Properties Section
+
+SET DOCUMENT Name = "Document name"
+SET DOCUMENT Description = "Document description"
+SET DOCUMENT Version = "1.0"
+SET DOCUMENT Copyright = "Copyright (c) 2012, haritha. All Rights Reserved."
+SET DOCUMENT Authors = "haritha"
+SET DOCUMENT Licenses = "Document license"
+SET DOCUMENT ContactInfo = "your@email.com"
+
+##################################################################################
+# Definitions Section
+a("APOE e4")
+DEFINE NAMESPACE ADO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/ADO.belns"
+DEFINE NAMESPACE AFFX AS URL "http://resource.belframework.org/belframework/20150611/namespace/affy-probeset-ids.belns"
+DEFINE NAMESPACE BRCO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/BRCO.belns"
+DEFINE NAMESPACE CHEBI AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi.belns"
+DEFINE NAMESPACE CHEBIID AS URL "http://resource.belframework.org/belframework/20150611/namespace/chebi-ids.belns"
+DEFINE NAMESPACE CHEMBL AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-names.belns"
+DEFINE NAMESPACE CHEMBLID AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/chembl-ids.belns"
+DEFINE NAMESPACE CTO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/CTO.belns"
+DEFINE NAMESPACE DO AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology.belns"
+DEFINE NAMESPACE DOID AS URL "http://resource.belframework.org/belframework/20150611/namespace/disease-ontology-ids.belns"
+DEFINE NAMESPACE EGID AS URL "http://resource.belframework.org/belframework/20150611/namespace/entrez-gene-ids.belns"
+DEFINE NAMESPACE FlyBase AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Dmel.belns"
+DEFINE NAMESPACE GOBP AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process.belns"
+DEFINE NAMESPACE GOBPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-biological-process-ids.belns"
+DEFINE NAMESPACE GOCC AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component.belns"
+DEFINE NAMESPACE GOCCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/go-cellular-component-ids.belns"
+DEFINE NAMESPACE HGNC AS URL "http://resource.belframework.org/belframework/20150611/namespace/hgnc-human-genes.belns"
+DEFINE NAMESPACE LMSD AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/LMSD.belns"
+DEFINE NAMESPACE MESHC AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals.belns"
+DEFINE NAMESPACE MESHCID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-chemicals-ids.belns"
+DEFINE NAMESPACE MESHCS AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures.belns"
+DEFINE NAMESPACE MESHCSID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-cellular-structures-ids.belns"
+DEFINE NAMESPACE MESHD AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases.belns"
+DEFINE NAMESPACE MESHDID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-diseases-ids.belns"
+DEFINE NAMESPACE MESHPP AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes.belns"
+DEFINE NAMESPACE MESHPPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/mesh-processes-ids.belns"
+DEFINE NAMESPACE MGI AS URL "http://resource.belframework.org/belframework/20150611/namespace/mgi-mouse-genes.belns"
+DEFINE NAMESPACE NIFT AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/NIFT.belns"
+DEFINE NAMESPACE NTN AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/Nutrition.belns"
+DEFINE NAMESPACE PDO AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PDO.belns"
+DEFINE NAMESPACE PH AS URL "http://belief-demo.scai.fraunhofer.de/openbel/repository/namespaces/Placeholder.belns"
+DEFINE NAMESPACE PMIBP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmibp.belns"
+DEFINE NAMESPACE PMICHEM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmichem.belns"
+DEFINE NAMESPACE PMICOMP AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmicomp.belns"
+DEFINE NAMESPACE PMIDIS AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmidis.belns"
+DEFINE NAMESPACE PMIPFAM AS URL "http://belief-demo.scai.fraunhofer.de/BeliefDashboard/dicten/namespaces/pmipfam.belns"
+DEFINE NAMESPACE PTS AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/PTS.belns"
+DEFINE NAMESPACE RGD AS URL "http://resource.belframework.org/belframework/20150611/namespace/rgd-rat-genes.belns"
+DEFINE NAMESPACE SCHEM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-chemicals.belns"
+DEFINE NAMESPACE SCOMP AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-named-complexes.belns"
+DEFINE NAMESPACE SDIS AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-legacy-diseases.belns"
+DEFINE NAMESPACE SFAM AS URL "http://resource.belframework.org/belframework/20150611/namespace/selventa-protein-families.belns"
+DEFINE NAMESPACE SP AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot.belns"
+DEFINE NAMESPACE SPID AS URL "http://resource.belframework.org/belframework/20150611/namespace/swissprot-ids.belns"
+DEFINE NAMESPACE dbSNP AS URL "http://belief.scai.fraunhofer.de/openbel/repository/namespaces/SNP.belns"
+
+
+# ANNOTATION URLS
+
+DEFINE ANNOTATION Anatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/anatomy.belanno"
+DEFINE ANNOTATION BodyRegion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-body-region.belanno"
+DEFINE ANNOTATION CardiovascularSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-cardiovascular-system.belanno"
+DEFINE ANNOTATION Cell AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell.belanno"
+DEFINE ANNOTATION CellLine AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-line.belanno"
+DEFINE ANNOTATION CellStructure AS URL "http://resource.belframework.org/belframework/20131211/annotation/cell-structure.belanno"
+DEFINE ANNOTATION DigestiveSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-digestive-system.belanno"
+DEFINE ANNOTATION Disease AS URL "http://resource.belframework.org/belframework/20131211/annotation/disease.belanno"
+DEFINE ANNOTATION FluidAndSecretion AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-fluid-and-secretion.belanno"
+DEFINE ANNOTATION HemicAndImmuneSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-hemic-and-immune-system.belanno"
+DEFINE ANNOTATION IntegumentarySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-integumentary-system.belanno"
+DEFINE ANNOTATION MeSHAnatomy AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-anatomy.belanno"
+DEFINE ANNOTATION MeSHDisease AS URL "http://resource.belframework.org/belframework/20131211/annotation/mesh-diseases.belanno"
+DEFINE ANNOTATION NervousSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-nervous-system.belanno"
+DEFINE ANNOTATION RespiratorySystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-respiratory-system.belanno"
+DEFINE ANNOTATION Species AS URL "http://resource.belframework.org/belframework/20131211/annotation/species-taxonomy-id.belanno"
+DEFINE ANNOTATION Tissue AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-tissue.belanno"
+DEFINE ANNOTATION UrogenitalSystem AS URL "http://resource.belframework.org/belframework/1.0/annotation/mesh-urogenital-system.belanno"
+
+##################################################################################
+# Statements Section
+
+SET STATEMENT_GROUP = "Group 1"
+
+# Add statements below this comment
+
+UNSET STATEMENT_GROUP
+##1##
+
+SET Citation = {"pubmed","Arendash GW1, King DL, Gordon MN, Morgan D, Hatcher JM, Hope CE, Diamond DM","11164808"}
+
+SET Species = "10090"
+
+SET Evidence = "In sensorimotor tasks, transgenic mice showed a progressive increase in open field activity, a progressive impairment in string agility, and an early-onset 
+impairment in balance beam. None of these sensorimotor changes appeared to be contributory to any cognitive impairments observed, however. Non-transgenic mice showed no 
+progressive behavioral change in any measure evaluated".
+
+bp(MGI:"Transgenic Mice") -> open filed activity
+
+SET Species = "10090"
+ 
+
+
+##2##
+
+SET Citation = {"PubMed","Wiltfang J1, Esselmann H, Bibl M, Smirnov A, Otto M, Paul S, Schmidt B, Klafki HW, Maler M, Dyrks T, Bienert M, Beyermann M, Rüther E, Kornhuber J","12065657"}
+
+SET Evidence = "Remarkably, patients with AD and CID shared elevated Abeta1-38% values, whereas otherwise the patterns were 
+distinct, allowing separation of AD from CID or OND patients without overlap. The presence of one or two ApoE epsilon4 alleles resulted in an overall reduction of CSF Abeta 
+peptides, which was pronounced for Abeta1-42".
+
+path(MESHD:AD)
+path(MESHD:CID) -> a(ADO:"Abeta_42")
+
+a(ADO:"ApoE e4") -| a(ADO:"Abeta_42")
+
+
+
+
+##3##
+SET Citation = {"PubMed","Zhuang H1, Kim YS, Namiranian K, Doré S","12853315"}
+
+SET Cell = mouse primary neuronal cell
+
+SET Species = "10090"
+
+SET Evidence = "Here, we show that the cyPGs, especially the 15-deoxy-Delta(12,14) PGJ(2), can specifically induce heme oxygenase 1 in mouse primary neuronal cells.
+Heme oxygenase is the enzyme responsible for the degradation of heme into biliverdin, ferrous iron, and carbon monoxide. 
+This enzyme conveys protection to oxidative cellular injury by degrading the pro-inflammatory heme; producing biliverdin and bilirubin, potent antioxidants; producing 
+carbon monoxide, a neurotransmitter that also has anti-inflammatory and vasodilatory properties; and assisting in keeping iron cellular homeostasis".
+ 
+a(ChEBI:"15-deoxy-Delta(12,14)-prostaglandin J2|A") - induce(MESHC:"heme oxygenase 1") 
+ 
+##4##
+
+SET Evidence = "Focal cerebral ischemia (FCI) induces rapid neuronal death in the ischemic core, which gradually expands toward the penumbra, partly as the result of a 
+neuroinflammatory response. It is known that propagation of neuroinflammation involves microglial cells, the resident macrophages of the brain, which are highly motile when 
+activated by specific signals. However, the signals that increase microglial cell motility in response to FCI remain mostly elusive."
+ 
+SET Disease = "neuroinflammation"
+
+SET Evidence = "Here, we tested the hypothesis that endocannabinoids mediate neuroinflammation propagation by increasing microglial cell motility. We found that,
+in mouse cerebral cortex, FCI greatly increases palmitoylethanolamide (PEA), only moderately increases anandamide [arachidonylethanolamide (AEA)], and does not 
+affect 2-arachidonoylglycerol levels. 
+We also found that PEA potentiates AEA-induced microglial cell migration, without affecting other steps of microglial activation, such as proliferation, particle engulfment, 
+and nitric oxide production. This potentiation of microglial cell migration by PEA involves reduction in cAMP levels".
+
+path(ChEBI:endocannabinoids) -> (ADO:neuroinflammation) -> microglial cell motiliy
+
+SET Evidence = "Our results show that PEA and AEA increase after FCI and synergistically enhance microglial cell motility. 
+Because such a response could participate in the propagation of the FCI-induced neuroinflammation within the CNS, and because PEA is likely to act through its own receptor, 
+a better understanding of the receptor engaged by PEA may help guide the search for improved therapies against neuroinflammation."
+
+##5##
+Set Citation = {"Pub Med","Uberti D1, Cantarella G, Facchetti F, Cafici A, Grasso G, Bernardini R, Memo M.","15094456"}
+
+Set Soecies = "10090"
+
+Set Disease = "Alzheimer's disease"
+
+SET Evidence = "Tumour-necrosis-factor-related apoptosis-inducing ligand (TRAIL) is a novel cytokine characterized by selective killing activity against tumour cells. 
+We recently found that beta-amyloid-induced apoptosis in a human neuronal cell line was mediated via induction of TRAIL. 
+Here, we show that TRAIL is specifically expressed in the brain of Alzheimer's disease (AD) patients and completely absent in the brain of non-demented patients. 
+TRAIL-like immunoreactivity was localized in AD affected regions, such as cerebral cortex, often in the proximity of Congo-red-positive amyloid plaques. 
+These findings suggest that neurons represent an independent and potential source of TRAIL, suggesting that the latter acts redundantly with other noxious stimuli in 
+neurodegenerative diseases characterized by amyloidosis and neuroinflammation".
+
+##6##
+
+SET Citation = {"PubMed","Walter L1, Dinh T, Stella N.","15371507"}
+
+SET Species = "9606"
+
+SET Disease = "neuroinflammation"
+
+SET Evidence = "The cytoplasm of neural cells contain millimolar amounts of ATP, which flood the extracellular space after injury, activating purinergic 
+receptors expressed by glial cells and increasing gliotransmitter production.
+These gliotransmitters, which are thought to orchestrate neuroinflammation, remain widely uncharacterized. Recently, we showed that microglial cells  produce 
+2-arachidonoylglycerol (2-AG), an endocannabinoid known to prevent the propagation of harmful neuroinflammation, and that ATP increases this production by 
+threefold at 2.5 min (Witting et al., 2004)". 
+
+ATP -> ChEBI("2-AG") (ADO:neuroinflammation)
+
+SET Evidence = "Here we show that ATP increases 2-AG production from mouse astrocytes in culture, a response that is more rapid (i.e., significant within 10 sec) and pronounced 
+(i.e., 60-fold increase at 2.5 min) than any stimulus-induced increase in endocannabinoid production reported thus far. 
+Increased 2-AG production from astrocytes requires millimolar amounts of ATP, activation of purinergic P2X7 receptors, sustained rise in intracellular calcium, and 
+diacylglycerol lipase activity".
+
+SET Evidence = "Furthermore, we show that astrocytes express monoacylglycerol lipase (MGL), the main hydrolyzing enzyme of 2-AG, the pharmacological inhibition of which potentiates 
+the ATP-induced 2-AG production (up to 113-fold of basal 2-AG production at 2.5 min). Our results show that ATP greatly increases, and MGL limits, 2-AG production from astrocytes.
+ We propose that 2-AG may function as a gliotransmitter, with MGL inhibitors potentiating this production and possibly restraining the propagation of harmful neuroinflammation."
+
+ChEBI("monoacylglycerol lipase") -> ChEBI("2-AG") -> (ADO:neuroinflammation)
+
+##7##
+SET Citation = {"PubMed","Jones NC1, Prior MJ, Burden-Teh E, Marsden CA, Morris PG, Murphy S.","16029197"}
+
+SET Evidence = "Interleukin (IL)-1beta plays an important role in the inflammatory response that results from traumatic brain injury and antagonism of the actions of this 
+cytokine can affect outcome.
+We subjected male mice to aseptic cryogenic injury and assessed recovery through anatomical, histological and functional measures following treatment with recombinant mouse IL-1
+receptor antagonist (IL-1ra).
+A single dose (1 microg, i.c.v.) at the time of injury reduced lesion volume 3 days later, as assessed by Nissl staining, and also the number (30%) of FluoroJade-positive 
+degenerating neurones. 
+Mice treated with IL-1ra performed better on the beam balance and in the grid test as compared with vehicle-treated animals. 
+Furthermore, IL-1ra-treated animals showed fewer (40%) nitric oxide synthase-2-positive cells in and around the lesion. These data suggest that 
+activation of the IL-1 receptor following trauma contributes to the pathology and that antagonism can reduce both anatomical and functional consequences of neuroinflammation."
+ 
+SET Species = "10090"
+
+SET Disease = "neuroinflammation"
+
+
+##8##
+SET Citation = {"PubMed","Wiendl H1, Feger U, Mittelbronn M, Jack C, Schreiner B, Stadelmann C, Antel J, Brueck W, Meyermann R, Bar-Or A, Kieseier BC, Weller M.","16123145"}
+
+SET Evidence = "HLA-G is a non-classical major histocompatibility complex (MHC) class I antigen with highly limited tissue distribution under non-pathological conditions. 
+Although capable of acting as a peptide-presenting molecule, its strong immune-inhibitory properties identify HLA-G as a mediator of immune tolerance with specific relevance at 
+immune-privileged sites such as trophoblast or thymus. 
+To assess the role of HLA-G in CNS immunity, we investigated its expression in brain specimens from patients with multiple sclerosis (n = 11), meningitis (n = 2) and Alzheimer's 
+disease (n = 2) and non-pathological CNS controls (n = 6). Furthermore, cultured human microglial cells and CSF of patients with multiple sclerosis and controls were assessed. 
+Furthermore, CSF from MS patients and controls, as well as cultured human microglial cells were assessed.
+ Using several HLA-G specific mAb and immunohistochemistry, HLA-G protein was found strongly expressed in brain specimens from patients with multiple sclerosis while it was 
+rarely detectable in the non-pathological control specimens. 
+In multiple sclerosis brain specimens, HLA-G immunoreactivity was observed in acute plaques, in chronic active plaques, in perilesional areas as well as in normal appearing white
+ matter. In all areas microglial cells, macrophages, and in part endothelial cells were identified as the primary cellular source of expression.
+ HLA-G was also found in other disease entities (meningitis, Alzheimer's specimens) where expression correlated to activation and MHC class II expression on microglial cells.
+ Importantly, ILT2, a receptor for HLA-G, was also found in multiple sclerosis brain specimens thus emphasizing the relevance of this inhibitory pathway in vivo.
+ HLA-G mRNA and protein expression and regulation could also be corroborated on cultured human microglial cells in vitro. Further, expression of HLA-G in the CSF of multiple 
+sclerosis patients and controls was analysed by flow cytometry and ELISA. Monocytes represented the main source of cellular HLA-G expression in the CSF. 
+Corresponding to the observations with the tissue specimens, CSF mean levels of soluble HLA-G were significantly higher in multiple sclerosis than in non-inflammatory controls 
+(171 +/- 31 versus 39 +/- 10 U/ml; P = 0.0001). The demonstration of HLA-G and its receptor ILT2 on CNS cells and in areas of microglia activation implicate HLA-G as a contributor to the fundamental mechanisms regulating immune reactivity in the CNS. 
+This pathway may act as an inhibitory feedback aimed to downregulate the deleterious effects of T-cell infiltration in neuroinflammation."
+
+##9##
+SET Citation = {"PubMed","Jin DQ1, Lim CS, Sung JY, Choi HG, Ha I, Han JS","16644126"}
+
+SET Disease = "neuroinflammation"
+
+SET Species = "9606"
+
+SET Evidence = "It has been reported that inflammatory processes are associated with the pathophysiology of Alzheimer's disease (AD), and the treatment of AD using 
+anti-inflammatory agents slows the progress of AD. Marine algae have been utilized in food products as well as in medicine products for a variety of purposes. 
+In this study, we investigated the neuroprotective effects of methanol extracts of Ulva conglobata (U. conglobata), a marine algae, on glutamate-induced neurotoxicity in the 
+murine hippocampal HT22 cell line and the anti-inflammatory effects on interferon gamma (IFN-gamma)-induced microglial activation in BV2 cells. U. conglobata methanol extracts 
+significantly attenuated the neurotoxicity induced by glutamate in HT22 cells and inhibited nitric oxide production induced by IFN-gamma in BV2 cells. U. conglobata methanol
+ extract treatments were also examined and it was found that they almost completely suppressed the expression of the proinflammatory enzyme cyclooxygenase 2 (COX-2) and inducible
+ nitric oxide synthase (iNOS).
+ These results suggest that U. conglobata possesses therapeutic potential for combating neurodegenerative diseases associated with neuroinflammation."
+
+ bp("inflammatory processes") -- bp("Alzheimer's disease")-| bp("neurodegenrative diseases")
+ 
+ ##10##
+ 
+ SET Citation = {"PubMed","Black JA1, Liu S, Hains BC, Saab CY, Waxman SG","16931536"}
+ 
+ SET Species = "10090"
+ 
+ SET Disease = "neuroinflammation"
+ 
+ SET Evidence = "Axonal degeneration is a major contributor to non-remitting deficits in multiple sclerosis, 
+and there is thus considerable current interest in the development of strategies that might prevent axonal loss in neuroinflammatory disease.Dysregulation of sodium ion homeostasis has been implicated in mechanisms leading to axonal degeneration, and several studies have shown that blockade of 
+sodium channels can ameliorate axon damage following anoxic, traumatic and nitric oxide-induced CNS injury.Two sodium channel blockers, phenytoin and flecainide, have been reported to protect 
+axons in experimental autoimmune encephalomyelitis (EAE) for 30 days, but long-term protective effects have not been studied. 
+We demonstrate here that oral administration of 
+phenytoin provides long-term (up to 180 days) protection for spinal cord corticospinal tract (CST) and dorsal column (DC) axons in both monophasic 
+(C57/BL6 mice) and chronic-relapsing (Biozzi mice) murine EAE. 
+Untreated C57/BL6 mice exhibit a 40-50% loss of CST and DF axons at 90 and 180 days post-EAE induction via myelin-oligodendrocyte glycoprotein (MOG) injection. 
+In contrast, only 4% of DF axons are lost at 90 days, and only 8% are lost at 180 days in phenytoin-treated C57/BL6 mice with EAE; only 21-29% of CST axons are
+ lost at 90 and 180 days in phenytoin-treated C57/BL6 mice with EAE. 
+Attenuation of dorsal column compound action potentials was ameliorated and clinical status was also significantly enhanced with phenytoin treatment at 90 and 
+180 days in this model. 
+In addition, inflammatory cell infiltration into the dorsal columns was reduced in phenytoin-treated mice with EAE compared with untreated mice with EAE. 
+Similar results were obtained in Biozzi mice with chronic-relapsing EAE followed for 120 days post-injection. 
+These observations demonstrate that phenytoin provides long-term protection of CNS axons and improves clinical status in both monophasic and chronic-relapsing
+ models of neuroinflammation".
+
+ChEBI (phenytoin) -> clinical status (ADO:neuroinflammation)
+ 
+ ##11##
+#####12853315
+
+SET Citation = {"PubMed","Zhuang H1, Kim YS, Namiranian K, Doré S","12853315"}
+
+SET Evidence = "Here, we show that the cyPGs, especially the 15-deoxy-Delta(12,14) PGJ(2), can specifically induce heme oxygenase 1 in mouse primary neuronal cells".
+
+SET Cell = "mouse primary neuronal cell"
+ 
+SET Species = "10090"
+
+a(ChEBI:15-deoxy-Delta(12,14)-prostaglandin J2|A)
+
+####12####
+
+SET Citation = {"PubMed","Tran EH1, Azuma YT, Chen M, Weston C, Davis RJ, Flavell RA","16938889"}
+
+SET Evidence = "Environmental insults such as microbial pathogens can contribute to the activation of autoreactive T cells, leading to inflammation of target organs and, 
+ultimately, autoimmune disease. 
+
+Various infections have been linked to multiple sclerosis and its animal counterpart, autoimmune encephalomyelitis. The molecular process by which 
+innate immunity triggers autoreactivity is not currently understood. By using a mouse model of multiple sclerosis, we found that the genetic loss of the MAPK, c-Jun N-terminal 
+kinase 1 (JNK1), enhances IL-10 production, rendering innate myeloid cells unresponsive to certain microbes and less capable of generating IL-17-producing, encephalitogenic
+ T cells. Moreover, JNK1-deficient central nervous system myeloid cells are unable to respond to effector T cell inflammatory cytokines, preventing further progression to
+ neuroinflammation. Thus, we have identified the JNK1 signal transduction pathway in myeloid cells to be a critical component of a regulatory circuit mediating inflammatory 
+responses in autoimmune disease. 
+Our findings provide further insights into the pivotal MAPK-regulated network of innate and adaptive cytokines in the progression to autoimmunity."
+
+GO("microbial pathogens") cat(T cells) GO(path("autoimmune disease"))
+
+GO("multiple sclerosis") path("autoimmune encephalomyelitis")
+
+####13####
+
+SET Citation = {"PubMed","Peng J1, Xie L, Stevenson FF, Melov S, Di Monte DA, Andersen JK.","17093086"}
+
+SET Species = "10090"
+
+SET Evidence = "The murine mutant weaver (gene symbol, wv) mouse, which carries a mutation in the gene encoding the G-protein inwardly rectifying potassium channel Girk2, exhibits a diverse range of defects as a result of postnatal cell death in several different brain neuron subtypes. Loss of dopaminergic nigrostriatal neurons in the weaver, unlike cerebellar granule neuronal loss, is via a noncaspase-mediated mechanism. Here, we present data demonstrating that degeneration of midbrain dopaminergic neurons in weaver is mediated via neuroinflammation. 
+Furthermore, in vivo administration of the anti-inflammatory agent minocycline attenuates nigrostriatal dopaminergic neurodegeneration. 
+This has novel implications for the use of the weaver mouse as a model for Parkinson's disease, which has been associated with increased neuroinflammation."
+
+ChEBI(minocycline) path(GO("nigrostriatal dopaminergic neurodegeneration")) -- weaver mouse -> (ADO:neuroinflammation)
+
+###14###
+SET Citation = {"PubMed","Karman J1, Chu HH, Co DO, Seroogy CM, Sandor M, Fabry Z."," 17114446"}
+
+SET Species = "9606"
+
+SET Disease = "Neuroinflammation"
+
+SET Evidence = "Neuroinflammation often starts with the invasion of T lymphocytes into the CNS leading to recruitment of macrophages and amplification of inflammation. 
+In this study, we show that dendritic cells (DCs) facilitate T-T cell help in the CNS and contribute to the amplification of local neuroinflammation. 
+We adoptively transferred defined amounts of naive TCR-transgenic (TCR) recombination-activating gene-1-deficient T cells into another TCR-transgenic mouse strain expressing 
+different Ag specificity. 
+Following adoptive transfers, we coinjected DCs that presented one or multiple Ags into the brain and followed the activation of T cells with defined specificities simultaneously. Injection of DCs presenting both Ags simultaneously led to significantly higher infiltration of T cells into the brain compared with injection of a mixture of DCs pulsed with two Ags separately. DCs mediated either cooperative or competitive interactions between T cell populations with different specificities depending upon their MHC-restricting element usage. These results suggest that DC-mediated cooperation between brain-infiltrating T cells of different Ag specificities in the CNS plays an important role in regulation of neuroinflammation. This work also implies that blocking Ag-specific responses may block not only the targeted specificities, but may also effectively block their cooperative assistance to other T cells. Therefore, these data justify more attention to Ag-specific therapeutic approaches for neuroinflammation."
+
+###15###
+
+SET Citation = {"PubMed","Bédard A1, Tremblay P, Chernomoretz A, Vallières L.","17285589 "}
+SET Evidence = "Microglia, monocytes, and peripheral macrophages share a common origin and many characteristics, but what distinguishes them from each other at the level of gene
+ expression remains largely unknown. In this study, we compared the transcriptional profiles of freshly purified microglia, monocytes, and spleen macrophages using 
+Affymetrix Mouse Genome arrays to identify genes predominantly expressed by microglia.
+ Among tens of thousands of genes assayed, 127 potential candidates were found, including nine newly discovered genes encoding plasma membrane and extracellular proteins. 
+In the brain, the latter were selectively expressed by microglia, as revealed by in situ hybridization. 
+Three of them were confirmed to be exclusively (MSR2) or predominantly (GPR12, GPR34) expressed in the brain compared to the other tissues examined. Furthermore, all of these 
+genes were upregulated in activated microglia after treatment with the demyelinating toxin cuprizone, suggesting that they play roles in neuroinflammation. 
+In conclusion, this study reports the identification of new selective markers for microglia, which should prove useful not only to identify and isolate these cells, 
+but also to better understand their distinctive properties."
+
+a(ADO:"microglia","monocytes","peripheral macrophages")
+
+###16###
+SET Citation = {"PubMed","Pugh PL1, Vidgeon-Hart MP, Ashmeade T, Culbert AA, Seymour Z, Perren MJ, Joyce F, Bate ST, Babin A, Virley DJ, Richardson JC, Upton N, Sunter D.","17324270"}
+
+SET Species = "10090"
+
+SET Evidence = "BACKGROUND: Data indicates anti-oxidant, anti-inflammatory and pro-cognitive properties of noradrenaline and analyses of post-mortem brain of Alzheimer's disease (AD) patients reveal major neuronal loss in the noradrenergic locus coeruleus (LC), the main source of CNS noradrenaline (NA). The LC has projections to brain regions vulnerable to amyloid deposition and lack of LC derived NA could play a role in the progression of neuroinflammation in AD. Previous studies reveal that intraperitoneal (IP) injection of the noradrenergic neurotoxin N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4) can modulate neuroinflammation in amyloid over-expressing mice and in one study, DSP-4 exacerbated existing neurodegeneration."
+
+chEBI(noradrenergic neurotoxin N-(2-chloroethyl)-N-ethyl-2-bromobenzylamine (DSP-4)) -> path(neurodegenration)
+
+METHODS:
+TASTPM mice over-express human APP and beta amyloid protein and show age related cognitive decline and neuroinflammation. In the present studies, 5 month old C57/BL6 and TASTPM mice were injected once monthly for 6 months with a low dose of DSP-4 (5 mg kg-1) or vehicle. At 8 and 11 months of age, mice were tested for cognitive ability and brains were examined for amyloid load and neuroinflammation.
+
+RESULTS:
+At 8 months of age there was no difference in LC tyrosine hydroxylase (TH) across all groups and cortical NA levels of TASTPM/DSP-4, WT/Vehicle and WT/DSP-4 were similar. NA levels were lowest in TASTPM/Vehicle. Messenger ribonucleic acid (mRNA) for various inflammatory markers were significantly increased in TASTPM/Vehicle compared with WT/Vehicle and by 8 months of age DSP-4 treatment modified this by reducing the levels of some of these markers in TASTPM. TASTPM/Vehicle showed increased astrocytosis and a significantly larger area of cortical amyloid plaque compared with TASTPM/DSP-4. However, by 11 months, NA levels were lowest in TASTPM/DSP-4 and there was a significant reduction in LC TH of TASTPM/DSP-4 only. Both TASTPM groups had comparable levels of amyloid, microglial activation and astrocytosis and mRNA for inflammatory markers was similar except for interleukin-1 beta which was increased by DSP-4. TASTPM mice were cognitively impaired at 8 and 11 months but DSP-4 did not modify this.
+
+CONCLUSION:
+These data reveal that a low dose of DSP-4 can have varied effects on the modulation of amyloid plaque deposition and neuroinflammation in TASTPM mice dependent on the duration of dosing."
+
+
+#####17#####
+SET Citation = {"PubMed","Davis RL1, Buck DJ, Saffarian N, Stevens CW.","17475341"}
+
+SET Evidence = "Emerging evidence indicates that neuroinflammatory responses in astroglia, including chemokine expression, are altered by opioids. Astroglial chemokines, such as CXCL10, are instrumental in response to many neuropathological insults. Opioid mediated disruption of astroglial CXCL10 expression may be detrimental in opioid abusers or patients receiving acute opioid therapy. We have characterized the in vitro effects of opioids on CXCL10 protein expression in human astroglial (A172) cells. The proinflammatory cytokine, tumor necrosis factor (TNF)alpha induced CXCL10 expression in A172 cells. Using MG-132, helenalin and SN50 [inhibitors of the transcription factor, nuclear factor (NF)-kappaB], we determined that NF-kappaB activation is instrumental in TNFalpha-induced CXCL10 expression in A172 astroglia. Morphine exposure during the 24 h TNFalpha stimulation period did not alter CXCL10 expression. However, fentanyl, a more potent mu-opioid receptor (MOR) agonist, inhibited TNFalpha-induced CXCL10 expression. Interestingly, neither the non-selective opioid receptor antagonist, naltrexone nor beta-funaltrexamine (beta-FNA), a highly selective MOR antagonist, blocked fentanyl mediated inhibition of TNFalpha-induced CXCL10 expression. Rather, beta-FNA dose-dependently inhibited TNFalpha-induced CXCL10 expression with a greater potency than that observed for fentanyl. Immunoblot analysis indicated that morphine, fentanyl and beta-FNA each reduced TNFalpha-induced nuclear translocation of NF-kappaB p65. These data show that beta-FNA and fentanyl inhibit TNFalpha-induced CXCL10 expression via a MOR-independent mechanism. Data also suggest that inhibition of TNFalpha-induced CXCL10 expression by fentanyl and beta-FNA is not directly related to a reduction in NF-kappaB p65 nuclear translocation. Further investigation is necessary in order to fully elucidate the mechanism through which these two opioid compounds inhibit CXCL10 expression. Understanding the mechanism by which chemokine expression is suppressed, particularly by the opioid antagonist, beta-FNA, may provide insights into the development of safe and effective treatments for neuroinflammation."
+
+
+
+
+
