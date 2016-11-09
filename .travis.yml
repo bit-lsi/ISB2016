@@ -15,4 +15,4 @@ install:
     - pip install pybel
 
 script:
-    - python -m pybel convert --path $BEL -vv
+    - python -m pybel convert --path $BEL
