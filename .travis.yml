@@ -1,0 +1,16 @@
+sudo: false
+cache: pip
+
+language: python
+
+python:
+    - "3.5"
+env:
+    - BEL="Alex.bel"
+	- BEL="Randa.bel"
+
+install:
+    - pip install pybel
+
+script:
+    - python -m pybel --bel $BEL -vv
