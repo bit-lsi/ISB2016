@@ -7,9 +7,9 @@ python:
     - "3.5"
 env:
     - BEL="Alex.bel"
-	- BEL="Randa.bel"
-	- BEL="Charlie.bel"
-	- BEL="Haritha.bel"
+    - BEL="Randa.bel"
+    - BEL="Charlie.bel"
+    - BEL="Haritha.bel"
 
 install:
     - pip install pybel
